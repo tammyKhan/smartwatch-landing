@@ -7,6 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+  <!-- Font-awesome -->
+ <script src="https://kit.fontawesome.com/44b771e9c2.js" crossorigin="anonymous"></script>
+
   <!-- Raleway font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,16 +36,73 @@
       font-family: "Poppins", sans-serif;
     }
 
-  </style>
-
-  
+    html {
+      scroll-behavior: smooth;
+    }
+  </style> 
 
   <title>Snyx</title>
 </head>
-<body class="">
+
+<body class="bg-gradient-to-r from-[#E3F0FF] to-[#F8E3FF] ">
   <!-- Header -->
    <header>
+     <!-- Navbar -->
+ <nav class="container mx-auto">
+  <div class="navbar">
+    <div class="navbar-start">
+        <!-- <div class="bg-[#ABEF5F] rotate-45 rounded-full w-8 h-8 text-center">
+          <i class="fa-solid fa-arrow-up "></i>
+        </div>
+        <a class="btn btn-ghost text-3xl font-bold">Rinterio</a> -->
+        <img class="w-26" src="./assets/logo/Group (2).png" alt="">
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="font-raleway menu menu-horizontal px-1 text-[1E1E1E] text-sm font-[500]">
+          <li class=""><a>Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a>Gallery</a></li>
+          <li><a>Feature</a></li>
+          <li><a>Product</a></li>
+          <li><a>FAQ</a></li>
+          <li><a>Review</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+       <div class="hidden md:flex lg:flex justify-center items-center  gap-3">
+        
+          <div >
+            <i class="fa-solid fa-magnifying-glass "></i>
+          </div>
+          <div >
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        
 
+        <img src="./assets/icon/menu.png" alt="">
+       </div>
+     </div>
+
+     <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-[#FFFFFF] text-center rounded-full">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
+          <li class=""><a>Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a>Gallery</a></li>
+          <li><a>Feature</a></li>
+          <li><a>Product</a></li>
+          <li><a>FAQ</a></li>
+          <li><a>Review</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+ </nav>
    </header>
 
    <!-- Main -->
