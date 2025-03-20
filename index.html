@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- daisyUI cdn-->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
 
   <!-- Font-awesome -->
  <script src="https://kit.fontawesome.com/44b771e9c2.js" crossorigin="anonymous"></script>
@@ -44,12 +45,12 @@
   <title>Snyx</title>
 </head>
 
-<body class="bg-gradient-to-r from-[#E3F0FF] to-[#F8E3FF] ">
+<body class="bg-gradient-to-r from-[#d3eeff] to-[#fdedfe] ">
   <!-- Header -->
    <header>
      <!-- Navbar -->
- <nav class="container mx-auto">
-  <div class="navbar">
+ <nav class="container mx-auto ">
+  <div class="navbar ">
     <div class="navbar-start">
         <!-- <div class="bg-[#ABEF5F] rotate-45 rounded-full w-8 h-8 text-center">
           <i class="fa-solid fa-arrow-up "></i>
@@ -107,7 +108,27 @@
 
    <!-- Main -->
     <main>
-
+       <!-- Banner Section -->
+        <section class="hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
+          <div class="hero-content pt-0 grid  lg:grid-cols-2 gap-0 ">
+            <img class="lg:h-[110vh] justify-self-end col-span-1" src="./assets//images/hero-img.png" alt="">
+            <div class="h-[90vh] col-span-1  justify-self-start">
+              <div class="h-[60vh] flex flex-col justify-end mr-10 bg-contain  bg-[url('./assets/images/hero-circle.png')] bg-no-repeat bg-right-top">
+                <h1 class="bg-gradient-to-r from-[#2887ff] to-[#973fff] text-transparent bg-clip-text border-b-2 pb-6 border-[#22acff] w-5/6 font-cormorant text-5xl font-bold">
+                Your Favorite Watch
+              </h1>
+              
+              
+              <p class="py-6 w-5/6 text-[#777] font-medium font-poppins">
+                There are many variations of passages of Lorem Ipsum available in some form others.
+              </p>
+            </div>
+              <button class="btn rounded-3xl mt-6 px-8 bg-gradient-to-r from-[#2887ff] to-[#973fff] text-white ">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to cart</button>
+            </div>
+          </div>
+        </section>
     </main>
 
     <!-- Footer -->
