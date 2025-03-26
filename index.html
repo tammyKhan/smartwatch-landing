@@ -40,6 +40,25 @@
     html {
       scroll-behavior: smooth;
     }
+
+    @keyframes scroll {
+    0% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 15s linear infinite; 
+    display: flex; 
+  }
+
+  .animate-scroll > div {
+    flex: 0 0 auto; 
+    min-width: 200px; 
+  }
   </style> 
 
   <title>Snyx</title>
@@ -412,14 +431,76 @@
          </section>
 
         <!-- Customer Reviews -->
+         <section class="my-24">
+          <div class="flex-col space-y-3 text-center mb-16">
+            <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Customer Reviews</h1>
+            <p class="sm:w-5/7 lg:w-3/7 mx-auto py-3 text-sm text-[#777] font-poppins">
+              There are many variations of passages of Lorem Ipsum available in some form.
+            </p>
+          </div>
 
+            <div class="overflow-hidden whitespace-nowrap">
+              <div class="animate-scroll flex space-x-6">
+      
+                  <!-- Review Card -->
+                  <div class="w-xs bg-[#f1f7ff] shadow-lg rounded-lg p-6 text-center">
+                      <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="./assets/images/Mask group.png" alt="User">
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <div class="flex justify-center text-yellow-500 mb-2">
+                          ★★★★★
+                      </div>
+                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                  </div>
+          
+                  <div class="w-xs bg-[#f1f7ff] shadow-lg rounded-lg p-6 text-center">
+                      <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="https://randomuser.me/api/portraits/men/2.jpg" alt="User">
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <div class="flex justify-center text-yellow-500 mb-2">
+                          ★★★★★
+                      </div>
+                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                  </div>
+          
+                  <div class="bg-[#f1f7ff] w-xs shadow-lg rounded-lg p-6 text-center">
+                      <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="https://randomuser.me/api/portraits/men/3.jpg" alt="User">
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <div class="flex justify-center text-yellow-500 mb-2">
+                          ★★★★★
+                      </div>
+                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                  </div>
+                  <div class="bg-[#f1f7ff] w-xs shadow-lg rounded-lg p-6 text-center">
+                      <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="https://randomuser.me/api/portraits/men/3.jpg" alt="User">
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <div class="flex justify-center text-yellow-500 mb-2">
+                          ★★★★★
+                      </div>
+                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                  </div>
+                  <div class="bg-[#f1f7ff] w-xs shadow-lg rounded-lg p-6 text-center">
+                      <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="https://randomuser.me/api/portraits/men/3.jpg" alt="User">
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <div class="flex justify-center text-yellow-500 mb-2">
+                          ★★★★★
+                      </div>
+                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                  </div>
+             
+              </div>
+            </div>
+         </section>
 
         <!-- Contact Us -->
+
+        
     </main>
 
     <!-- Footer -->
      <footer>
 
      </footer>
+
+   
+
 </body>
 </html>
