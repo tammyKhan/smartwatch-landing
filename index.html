@@ -38,14 +38,11 @@
 </head>
 
 <body class="bg-gradient-to-r from-[#d3eeff] to-[#fdedfe] ">
-  <!-- Navbar -->
- <nav class="container mx-auto ">
+ <!-- Header -->
+ <header class="container mx-auto ">
   <div class="navbar ">
     <div class="navbar-start">
-        <!-- <div class="bg-[#ABEF5F] rotate-45 rounded-full w-8 h-8 text-center">
-          <i class="fa-solid fa-arrow-up "></i>
-        </div>
-        <a class="btn btn-ghost text-3xl font-bold">Rinterio</a> -->
+      
         <img class="w-26" src="./assets/logo/Group (2).png" alt="">
       </div>
       <div class="navbar-center hidden lg:flex">
@@ -70,8 +67,62 @@
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
         
+                    <!-- ____________________ -->
+          <!-- Sidebar Wrapper (Includes Overlay & Sidebar) -->
+          <div id="sidebarContainer" class="fixed inset-0 hidden z-50">
+            <!-- Sidebar Overlay -->
+            <div id="overlay" class="absolute inset-0 backdrop-brightness-50 backdrop-contrast-50 opacity-0 transition-opacity duration-300"></div>
 
-        <img src="./assets/icon/menu.png" alt="">
+
+
+            <!-- Sidebar Drawer -->
+            <div id="sidebar" class="absolute top-0 right-0 h-full w-80 bg-white shadow-lg p-6 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+              
+              <!-- Close Button -->
+              <div id="closeSidebar" class=" absolute top-4 right-4 cursor-pointer">
+                <i class="fa-solid fa-xmark hover:text-red-600 text-lg"></i>
+              </div>
+
+              <!-- Sidebar Content -->
+              <div class="mt-6">
+                <img class="w-26" src="./assets/logo/Group (2).png" alt="">
+
+                <div class="mt-4 text-gray-700">
+                  <p class="font-semibold">Head Office</p>
+                  <p>🏠 House-5, Avenue, New York</p>
+                  <p>📞 +3234-7665545</p>
+                  <p>📧 nyx@headoffice.com</p>
+                </div>
+
+                <div class="mt-4 flex gap-3">
+                  <button class="bg-gray-200 p-2 rounded-full">🌐</button>
+                  <button class="bg-gray-200 p-2 rounded-full">📸</button>
+                  <button class="bg-gray-200 p-2 rounded-full">✖️</button>
+                  <button class="bg-gray-200 p-2 rounded-full">🅱️</button>
+                </div>
+
+                <form class="mt-6 space-y-3">
+                  <input type="text" placeholder="Name" class="w-full p-2 border rounded">
+                  <input type="email" placeholder="Email" class="w-full p-2 border rounded">
+                  <input type="text" placeholder="Subject" class="w-full p-2 border rounded">
+                  <textarea placeholder="Message" class="w-full p-2 border rounded h-24"></textarea>
+                  <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+                    Submit
+                  </button>
+                </form>
+
+                <div class="mt-6 space-y-4">
+                  <p class="text-gray-600">Additional Information</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar Open Button -->
+          <img id="openSidebar" class="cursor-pointer" src="./assets/icon/menu.png" alt="">
+         <!-- ________________ -->
+
        </div>
      </div>
 
@@ -93,10 +144,12 @@
         </ul>
       </div>
     </div>
- </nav>
-  <!-- Header -->
-   <header>
-     <!-- Banner Section -->
+ </header> 
+
+   <!-- Main -->
+    <main>
+
+        <!-- Banner Section -->
      <section class="hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
       <div class="hero-content pt-0 grid  lg:grid-cols-2 gap-0 ">
         <img class="lg:h-[110vh] justify-self-end col-span-1" src="./assets//images/hero-img.png" alt="">
@@ -117,10 +170,6 @@
         </div>
       </div>
     </section>
-   </header>
-
-   <!-- Main -->
-    <main>
 
         <!-- Featured Collection -->
            <section class="px-6 w-10/12 mx-auto mb-10">
