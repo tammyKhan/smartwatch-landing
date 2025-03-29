@@ -1,3 +1,19 @@
+// search-bar popup_____
+const searchIcon = document.getElementById('search-icon');
+const searchBar = document.getElementById('search-bar');
+
+searchIcon.addEventListener('click', () => {
+    searchBar.classList.remove('scale-0');
+    searchBar.classList.add('scale-100');
+});
+
+document.addEventListener('click', (event) => {
+    if (!searchBar.contains(event.target) && event.target !== searchIcon) {
+        searchBar.classList.remove('scale-100');
+        searchBar.classList.add('scale-0');
+    }
+});
+
 
 //  /* featured Carousel */ ____________________
 $(document).ready(function () {

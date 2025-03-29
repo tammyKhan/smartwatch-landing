@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <!-- owl carousel -->
+  
   <!-- Owl Carousel CSS (Use CDN) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -39,8 +39,8 @@
 
 <body class="bg-gradient-to-r from-[#d3eeff] to-[#fdedfe] ">
  <!-- Header -->
- <header class="container mx-auto ">
-  <div class="navbar ">
+ <header class="container mx-auto relative">
+  <div class="navbar container mx-auto">
     <div class="navbar-start">
       
         <img class="w-26" src="./assets/logo/Group (2).png" alt="">
@@ -58,11 +58,18 @@
         </ul>
       </div>
       <div class="navbar-end">
-       <div class="hidden md:flex lg:flex justify-center items-center  gap-3">
+       <div class=" md:flex lg:flex justify-center items-center  gap-3">
         
-          <div >
-            <i class="fa-solid fa-magnifying-glass "></i>
-          </div>
+        <div>
+          <i id="search-icon" class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+      </div>
+      <div id="search-bar" class="absolute right-0 top-12 w-[400px] p-3 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg transform scale-0 origin-top transition-transform duration-300 ease-in-out">
+          <label class="input relative w-full">
+              <svg class="h-[1em] opacity-50 absolute left-2 top-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+              <input type="search" required placeholder="Search" class="w-full pl-8 p-2 border-none"/>
+          </label>
+         
+      </div>
           <div >
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
@@ -122,9 +129,11 @@
           <!-- Sidebar Open Button -->
           <img id="openSidebar" class="cursor-pointer" src="./assets/icon/menu.png" alt="">
          <!-- ________________ -->
+      
 
        </div>
      </div>
+
 
      <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-[#FFFFFF] text-center rounded-full">
@@ -572,8 +581,7 @@
           <form class="mt-6 space-y-6">
             <div>
                 <label class="block text-gray-700">Name</label>
-                <input type="text"  
-                    class="w-full border-b-2 ou border-gray-400 focus:border-blue-500 outline-none py-2" required />
+                <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500" />
             </div>
 
             <div>

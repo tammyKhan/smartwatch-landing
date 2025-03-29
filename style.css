@@ -30,3 +30,8 @@ display: flex;
 flex: 0 0 auto; 
 min-width: 200px; 
 }
+
+.form-border {
+  border: none;
+  /* border-bottom: black; */
+}
