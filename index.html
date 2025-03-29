@@ -569,7 +569,7 @@
          </section>
 
         <!-- Contact Us -->
-        <section class="flex flex-col md:flex-row w-10/12 mx-auto">
+        <section class="flex flex-col-reverse md:flex-row w-10/12 mx-auto md:mt-24 md:mb-24">
            <div>
             <div class="flex-col space-y-3  mb-10">
               <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Contact Us</h1>
@@ -578,25 +578,17 @@
               </p>
             </div>
           <!-- form -->
-          <form class="mt-6 space-y-6">
-            <div>
-                <label class="block text-gray-700">Name</label>
-                <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500" />
+          <form class="font-poppins">
+            <div class="mb-8  border-b-2 border-[#aeb6bf]">
+                <input type="text" placeholder="Name" class=" w-full p-2   border-none  focus:outline-none focus:ring focus:ring-blue-200 focus:rounded-box">
             </div>
-
-            <div>
-                <label class="block text-gray-700">Gmail</label>
-                <input type="email" placeholder="Enter your Gmail" 
-                    class="w-full border-b-2 border-gray-400 focus:border-blue-500 outline-none py-2" required />
-            </div>
-
-            <div>
-                <label class="block text-gray-700">Message</label>
-                <textarea placeholder="Type your message..." 
-                    class="w-full border-b-2 border-gray-400 focus:border-blue-500 outline-none py-2 resize-none" required></textarea>
-            </div>
-
-            <button type="submit" class="btn w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+            <div class="mb-8  border-b-2 border-[#aeb6bf]">
+              <input type="email" placeholder="Gmail" class=" w-full p-2   border-none  focus:outline-none focus:ring focus:ring-blue-200 focus:rounded-box">
+          </div>
+          <div class="mb-8  border-b-2 border-[#aeb6bf]">
+            <input type="text" placeholder="Message" class=" w-full p-2   border-none  focus:outline-none focus:ring focus:ring-blue-200 focus:rounded-box">
+        </div>
+            <button class="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition duration-300">
                 SEND
             </button>
         </form>
@@ -604,16 +596,54 @@
            </div>
            <!-- Image -->
            <div>
-
+              <img src="./assets/images/contact_us 1 (1).png" alt="">
            </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-     <footer>
+   <!-- Footer -->
+<footer class="relative bg-[url('./assets/images/footer-bg.png')] bg-cover bg-center bg-no-repeat text-white py-16 mt-10">
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-[#1c73d0] to-[#9039dc] opacity-80"></div>
 
-     </footer>
+  <div class="container mx-auto px-4 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+              <img src="./assets/logo/Group (2).png" alt="Logo" class="w-32 mb-4 filter brightness-0 invert">
+              <p class="text-sm">Write a scene (based ondeffecult is jsdfnwhiestddg asdfgg asdfghg)</p>
+              <div class="flex space-x-4 mt-4">
+                  <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-youtube"></i></a>
+                  <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-square-instagram"></i></a>
+              </div>
+          </div>
+          <div>
+              <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
+              <ul class="space-y-2">
+                  <li><a href="#" class="text-sm hover:text-gray-300">About Us</a></li>
+                  <li><a href="#" class="text-sm hover:text-gray-300">Features</a></li>
+                  <li><a href="#" class="text-sm hover:text-gray-300">News</a></li>
+                  <li><a href="#" class="text-sm hover:text-gray-300">Careers</a></li>
+              </ul>
+          </div>
+          <div>
+              <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+              <p class="text-sm mb-4">There are many variations of passages of Lorem Ipsum available, but the majority have.</p>
+              <div class="flex">
+                  <input type="email" placeholder="Enter your email" class="bg-[#4e4bc6] text-white border-none p-2 rounded-l-md focus:outline-none flex-grow">
+                  <button class="bg-[#374cb8] hover:bg-blue-600 text-white p-2 rounded-r-md">Subscribe</button>
+              </div>
+          </div>
+      </div>
+      <div class="text-center mt-20">
+          <p class="text-sm">Copyright © Invato Agency All right reserved 2024</p>
+      </div>
+  </div>
+</footer>
+
+
 
 
      
