@@ -8,24 +8,34 @@ const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  // Scroll down (when user scrolls down)
-  if (currentScroll > lastScrollTop) {  
-    // If scroll position is less than or equal to 200px, remove scrolled class
-    if (currentScroll <= 200) {
-      header.classList.remove('scrolled'); // Remove scrolled class when scroll position is less than or equal to 200px
+  // Only apply functionality when scrolled 200px or more
+  if (currentScroll > 200) {
+    // Scroll down (when user scrolls down)
+    if (currentScroll > lastScrollTop) {
+      // header smoothly chole jabe
+      header.style.transition = 'transform 0.3s ease-in-out';
+      header.style.transform = 'translateY(-100%)'; // হেডারটি উপরে চলে যাবে
+    } else {
+      // Scroll up (when user scrolls up)
+      // header smoothly asbe & bg-white hobe
+      header.style.transition = 'transform 0.3s ease-in-out, background-color 0.3s ease-in-out';
+      header.style.transform = 'translateY(0)'; // হেডারটি আবার আসবে
+      header.style.backgroundColor = 'white'; // ব্যাকগ্রাউন্ড সাদা হবে
+
+      // Add scrolled class to header
+      header.classList.add('scrolled');
     }
   } else {
-    // Scroll up (when user scrolls up)
-    // Only add scrolled class when scrolled 200px or more
-    if (currentScroll > 200) {
-      header.classList.add('scrolled'); // Add scrolled class to header when scrolled more than 200px
-    }
+    // Reset header to default state when scrolled less than 200px
+    header.style.transition = 'none';
+    header.style.transform = 'translateY(0)';
+    header.style.backgroundColor = ''; // ডিফল্ট ব্যাকগ্রাউন্ড কালার
+    header.classList.remove('scrolled'); // Remove scrolled class
   }
 
   // Prevent negative scroll (when scrolling back to top)
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
-
 
 // search-bar popup_____
 const searchIcon = document.getElementById('search-icon');
