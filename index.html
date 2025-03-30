@@ -42,6 +42,23 @@
  <header class="container mx-auto relative">
   <div class="navbar container mx-auto">
     <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-center rounded-full">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow left-0">
+          <li class=""><a>Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#review">Review</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
       
         <img class="w-26" src="./assets/logo/Group (2).png" alt="">
       </div>
@@ -58,7 +75,7 @@
         </ul>
       </div>
       <div class="navbar-end">
-       <div class=" md:flex lg:flex justify-center items-center  gap-3">
+       <div class=" mr-3 flex  justify-center items-center  gap-3">
         
         <div>
           <i id="search-icon" class="fa-solid fa-magnifying-glass cursor-pointer"></i>
@@ -155,23 +172,7 @@
      </div>
 
 
-     <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-[#FFFFFF] text-center rounded-full">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
-          <li class=""><a>Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a>Gallery</a></li>
-          <li><a>Feature</a></li>
-          <li><a>Product</a></li>
-          <li><a>FAQ</a></li>
-          <li><a>Review</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-      </div>
+     
     </div>
  </header> 
 
@@ -180,11 +181,11 @@
 
         <!-- Banner Section -->
      <section id="about" class="hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
-      <div class="hero-content pt-0 grid  lg:grid-cols-2 gap-0 ">
-        <img class="lg:h-[110vh] justify-self-end col-span-1" src="./assets//images/hero-img.png" alt="">
-        <div class="h-[90vh] col-span-1  justify-self-start">
+      <div class="hero-content pt-0 grid  md:grid-cols-2 gap-0 ">
+        <img class=" h-[80vh] md:h-[90vh] lg:h-[110vh] justify-self-center lg:justify-self-end col-span-1" src="./assets//images/hero-img.png" alt="">
+        <div class="h-[90vh] col-span-1  justify-self-start ml-3 lg:ml-0">
           <div class="h-[60vh] flex flex-col justify-end mr-10 bg-contain  bg-[url('./assets/images/hero-circle.png')] bg-no-repeat bg-right-top">
-            <h1 class="bg-gradient-to-r from-[#2887ff] to-[#973fff] text-transparent bg-clip-text border-b-2 pb-6 border-[#22acff] w-5/6 font-cormorant text-5xl font-bold">
+            <h1 class="bg-gradient-to-r from-[#2887ff] to-[#973fff] text-transparent bg-clip-text border-b-2 pb-6 border-[#22acff] w-5/6 font-cormorant text-4xl lg:text-5xl font-bold">
             Your Favorite Watch
           </h1>
           
@@ -319,160 +320,203 @@
                </div>
            </section>
 
-          <!-- Our Gallery -->
-          <section id="gallery" class="my-24">
-            <div class="flex-col space-y-3 text-center mb-14">
-              <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Our Gallery</h1>
-              <p class="sm:w-5/7 lg:w-3/7 mx-auto py-3 text-sm text-[#777] font-poppins">
-                There are many variations of passages of Lorem Ipsum available in some form.
-              </p>
-            </div>
+         <!-- Our Gallery -->
+    <section id="gallery" class="my-24">
+      <div class="flex-col space-y-3 text-center mb-14">
+        <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Our Gallery</h1>
+        <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
+          There are many variations of passages of Lorem Ipsum available in some form.
+        </p>
+      </div>
 
-            <!-- Grid Container -->
-            <div class="md:grid grid-rows-2 grid-cols-14 h-screen cursor-pointer">
-              
-              <!-- Image Wrapper with Inner Border -->
-              <div class="relative col-span-4 row-span-2 overflow-hidden group">
-                <img class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110" 
-                     src="./assets/images/Gallery-1.jpg" 
-                     alt="Gallery Image">
-                
-                <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
-              </div>
+      <!-- Grid Container -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-rows-2 lg:grid-cols-14 h-auto cursor-pointer">
 
-              <div class="relative col-span-6 overflow-hidden group">
-                <img class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110 " src="./assets/images/Gallery-2.jpg"  alt="Gallery Image">
-                
-                <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
-              </div>
+        <!-- Image Wrapper with Inner Border -->
+        <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 lg:row-span-2 overflow-hidden group">
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[90vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+              src="./assets/images/Gallery-1.jpg" 
+              alt="Gallery Image">
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+        </div>
 
-              <div class="relative col-span-4 overflow-hidden group">
-                <img class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110 " src="./assets/images/gallery-3.jpg"  alt="Gallery Image">
-                
-                <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
-              </div>
+        <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-6  overflow-hidden group">
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+              src="./assets/images/Gallery-2.jpg" 
+              alt="Gallery Image">
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+        </div>
 
-              <div class="relative col-span-4 overflow-hidden group">
-                <img class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110 " src="./assets/images/gallery-4.jpg"  alt="Gallery Image">
-                
-                <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
-              </div>
+        <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 overflow-hidden group">
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+              src="./assets/images/gallery-3.jpg" 
+              alt="Gallery Image">
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+        </div>
 
-              <div class="relative col-span-6 row-span-1 overflow-hidden group">
-                <img class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110 " src="./assets/images/gallery-5.jpg"  alt="Gallery Image">
-                
-                <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
-              </div>
+        <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 overflow-hidden group">
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+              src="./assets/images/gallery-4.jpg" 
+              alt="Gallery Image">
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+        </div>
 
-            </div>
-          </section>
+        <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-6 lg:row-span-1 overflow-hidden group">
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+              src="./assets/images/gallery-5.jpg" 
+              alt="Gallery Image">
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+        </div>
+
+      </div>
+    </section>
+
 
       <!-- Special Features -->
-      <section class="mb-24">
-        <div class="flex-col space-y-3 text-center mb-14">
-          <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Special Features</h1>
-          <p class="sm:w-5/7 lg:w-3/7 mx-auto py-3 text-sm text-[#777] font-poppins">
-            There are many variations of passages of Lorem Ipsum available in some form.
-          </p>
+    <section class="mb-24">
+      <div class="flex-col space-y-3 text-center mb-14">
+        <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Special Features</h1>
+        <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
+          There are many variations of passages of Lorem Ipsum available in some form.
+        </p>
+      </div>
+
+      <!-- Grid Container -->
+      <div class="grid grid-cols-1  lg:grid-cols-3  gap-6">
+
+        <!-- content-1 -->
+        <div class="hidden lg:block space-y-10 sm:space-y-16 lg:space-y-28">
+          <div class="flex gap-3 sm:justify-center lg:justify-end ml-20 lg:ml-0  lg:mr-1">
+            <div class="font-poppins w-2/3 text-end">
+              <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
+              <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum  available</p>
+            </div>
+            <div class="h-9 w-9 rounded-full bg-[#0068e1] text-white flex items-center justify-center">
+              <i class="fa-solid fa-stopwatch text-base"></i>
+            </div>
+          </div>
+          <div class="flex gap-3 sm:justify-center lg:justify-end ml-20 lg:ml-0">
+            <div class="font-poppins w-2/3 text-end">
+              <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
+              <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
+            </div>
+            <div class=" lg:mr-10 h-9 w-9 rounded-full bg-[#23098a] text-white flex items-center justify-center">
+              <i class="fa-solid fa-fire-flame-simple"></i>
+            </div>
+          </div>
+          <div class="flex gap-3 sm:justify-center lg:justify-end ml-20 lg:ml-0 mr-1">
+            <div class="font-poppins w-2/3 text-end">
+              <h4 class="text-sm font-semibold text-black mb-2">Waterproof Rellability</h4>
+              <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available </p>
+            </div>
+            <div class="h-9 w-9 rounded-full bg-[#ff8f61] text-white flex items-center justify-center">
+              <img class="w-4" src="./assets/icon/special-icon.png" alt="">
+            </div>
+          </div>
         </div>
-        <div class="grid grid-cols-3 ">
-          <!-- content-1 -->
-          <div class="space-y-28 ">
-            <div class=" flex gap-3 ml-9 justify-end">
-              <div class="font-poppins w-2/3 text-end">
-                <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
-                <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
-              </div>
-              <div class="h-9 w-9 rounded-full bg-[#0068e1] text-white flex items-center justify-center">
-                <i class="fa-solid fa-stopwatch text-base"></i>
-              </div>
-            </div>
-            <div class="flex gap-3  justify-end ">
-              <div class="font-poppins w-2/3 text-end">
-                <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
-                <p class="text-xs text-[#777]">There are many variations of passages of Lorem ipsum available, </p>
-              </div>
-              <div class="h-9 w-9 mr-11 rounded-full bg-[#23098a] text-white flex items-center justify-center">
-                <i class="fa-solid fa-fire-flame-simple"></i>
-              </div>
-            </div>
-            <div class="flex gap-3 ml-9 justify-end">
-              <div class="font-poppins w-2/3 text-end">
-                <h4 class="text-sm font-semibold text-black mb-2">Waterproof Rellability</h4>
-                <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
-              </div>
-              <div class="h-9 w-9 rounded-full bg-[#ff8f61] text-white flex items-center justify-center">
-                <img class="w-4" src="./assets/icon/special-icon.png" alt="">
-              </div>
-            </div>
-            
-          </div>
 
-          <!-- image container -->
-          <div>
-            <img src="./assets/images/special.png" alt="">
+        <!-- content-2 -->
+        <div class="block lg:hidden space-y-10 sm:space-y-16 lg:space-y-28 ">
+          <div class="flex gap-3 justify-center lg:justify-start">
+            <div class="h-9 w-9 rounded-full bg-[#0068e1] text-white flex items-center justify-center">
+              <i class="fa-solid fa-stopwatch text-base"></i>
+            </div>
+            <div class="font-poppins w-2/3">
+              <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
+              <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum  available</p>
+            </div>
           </div>
-
-          <!-- content-2 -->
-          <div class="space-y-28 ">
-            <div class="flex gap-3 ">
-              <div class="h-9 w-9 rounded-full bg-[#ffae31] text-white flex items-center justify-center">
-                <img class="h-4 w-4" src="./assets//icon/H.svg" alt="">
-              </div>
-              <div class="font-poppins w-2/3 ">
-                <h4 class="text-sm font-semibold text-black mb-2">Health Monitoring</h4>
-                <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
-              </div>
-           </div>
-           <div class=" flex gap-3 ">
-            <div class="h-9 ml-10 w-9 rounded-full bg-[#ff6f31] text-white flex items-center justify-center">
-              <i class="fa-brands fa-canadian-maple-leaf"></i>
+          <div class="flex gap-3 justify-center lg:justify-start">
+            <div class=" lg:mr-10 h-9 w-9 rounded-full bg-[#23098a] text-white flex items-center justify-center">
+              <i class="fa-solid fa-fire-flame-simple"></i>
             </div>
             <div class="font-poppins w-2/3 ">
+              <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
+              <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
+            </div>
+          </div>
+          <div class="flex gap-3 justify-center lg:justify-start">
+            <div class="h-9 w-9 rounded-full bg-[#ff8f61] text-white flex items-center justify-center">
+              <img class="w-4" src="./assets/icon/special-icon.png" alt="">
+            </div>
+            <div class="font-poppins w-2/3 ">
+              <h4 class="text-sm font-semibold text-black mb-2">Waterproof Rellability</h4>
+              <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- image container -->
+        <div class="flex justify-center items-center">
+          <img class="h-[50vh] lg:h-[70vh] max-w-full" src="./assets/images/special.png" alt="">
+        </div>
+
+        <!-- content-2 -->
+        <div class="space-y-10 sm:space-y-16 lg:space-y-28 ">
+          <div class="flex gap-3 justify-center lg:justify-start">
+            <div class="h-9 w-9  rounded-full bg-[#ffae31] text-white flex items-center justify-center">
+              <img class="h-4 w-4" src="./assets/icon/H.svg" alt="">
+            </div>
+            <div class="font-poppins w-2/3">
               <h4 class="text-sm font-semibold text-black mb-2">Health Monitoring</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
             </div>
-         </div>
-         <div class=" flex gap-3 ">
-          <div class="h-9 w-9 rounded-full bg-[#00d0dd] text-white flex items-center justify-center">
-            <i class="fa-solid fa-gear"></i>
           </div>
-          <div class="font-poppins w-2/3 ">
-            <h4 class="text-sm font-semibold text-black mb-2">Interchangeable Straps</h4>
-            <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
+          <div class="flex gap-3 justify-center lg:justify-start">
+            <div class="h-9 lg:ml-10 w-9 rounded-full bg-[#ff6f31] text-white flex items-center justify-center">
+              <i class="fa-brands fa-canadian-maple-leaf"></i>
+            </div>
+            <div class="font-poppins w-2/3">
+              <h4 class="text-sm font-semibold text-black mb-2">Health Monitoring</h4>
+              <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
+            </div>
           </div>
-       </div>
-            
+          <div class="flex gap-3 justify-center lg:justify-start">
+            <div class="h-9 w-9  rounded-full bg-[#00d0dd] text-white flex items-center justify-center">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="font-poppins w-2/3">
+              <h4 class="text-sm font-semibold text-black mb-2">Interchangeable Straps</h4>
+              <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-        <!-- Sale Up -->
-       <section id="product" class="lg:mt-56 mb-12 bg-[#cad7fa] lg:relative">
-           <div class="flex w-9/12 mx-auto">
-            <div class="my-14">
-                <h3 class="font-cormorant text-4xl text-black font-bold">Sale Up to 30% Offer</h3>
-                <p class="font-poppins text-base text-[#777] mt-3 w-2/3">There are many variations of passages of Lorem Ipsum available in some form, </p>
-                <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
-                  <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
 
-            </div>
-            <div class=" absolute right-20 -top-30">
-                <img class="h-[80vh]" src="./assets/images/sale-up-img.png" alt="">
-            </div>
-           </div>
-       </section>
+       <!-- Sale Up -->
+    <section id="product" class="lg:mt-56 mb-12 bg-[#cad7fa] lg:relative">
+      <div class="flex flex-col lg:flex-row w-9/12 mx-auto">
+        <!-- Image Section -->
+        <div class="relative lg:absolute lg:right-20 lg:top-[-45%] mt-6 lg:mt-0 mx-auto">
+          <img class="h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-contain mx-auto" src="./assets/images/sale-up-img.png" alt="">
+        </div>
+
+        <!-- Content Section -->
+        <div class="my-14 text-center lg:text-left">
+          <h3 class="font-cormorant text-4xl text-black font-bold">Sale Up to 30% Offer</h3>
+          <p class="font-poppins text-base text-[#777] mt-3 lg:w-2/3 mx-auto lg:mx-0">There are many variations of passages of Lorem Ipsum available in some form, </p>
+          <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+            <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now
+          </button>
+        </div>
+
+        
+
+      </div>
+    </section>
 
 
         <!-- What people ask -->
           <section id="faq" class="mt-24 mb-24 w-9/12 mx-auto">
             <div class="flex-col space-y-3 text-center mb-10">
               <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">What People Usually Ask</h1>
-              <p class="sm:w-5/7 lg:w-3/7 mx-auto py-3 text-sm text-[#777] font-poppins">
+              <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
                 There are many variations of passages of Lorem Ipsum available in some form.
               </p>
             </div>
-             <div class="grid md:grid-cols-2 gap-5">
+             <div class="grid lg:grid-cols-2 gap-5">
               <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300 ">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title font-semibold">Can I use this clock as a mirror?</div>
@@ -532,7 +576,7 @@
          <section id="review" class="my-24">
           <div class="flex-col space-y-3 text-center mb-16">
             <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Customer Reviews</h1>
-            <p class="sm:w-5/7 lg:w-3/7 mx-auto py-3 text-sm text-[#777] font-poppins">
+            <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
               There are many variations of passages of Lorem Ipsum available in some form.
             </p>
           </div>
