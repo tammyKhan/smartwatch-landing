@@ -31,3 +31,19 @@ flex: 0 0 auto;
 min-width: 200px; 
 }
 
+/* Initially, the header will have a background of transparent */
+header {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* When the header scrolls */
+header.scrolled {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow when the header is scrolled */
+}
+

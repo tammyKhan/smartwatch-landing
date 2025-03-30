@@ -1,3 +1,32 @@
+// header scrolling __________________
+
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+const navbar = document.querySelector('.navbar');
+
+// Scroll event listener
+window.addEventListener('scroll', () => {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Scroll down (when user scrolls down)
+  if (currentScroll > lastScrollTop) {  
+    // If scroll position is less than or equal to 200px, remove scrolled class
+    if (currentScroll <= 200) {
+      header.classList.remove('scrolled'); // Remove scrolled class when scroll position is less than or equal to 200px
+    }
+  } else {
+    // Scroll up (when user scrolls up)
+    // Only add scrolled class when scrolled 200px or more
+    if (currentScroll > 200) {
+      header.classList.add('scrolled'); // Add scrolled class to header when scrolled more than 200px
+    }
+  }
+
+  // Prevent negative scroll (when scrolling back to top)
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+
 // search-bar popup_____
 const searchIcon = document.getElementById('search-icon');
 const searchBar = document.getElementById('search-bar');

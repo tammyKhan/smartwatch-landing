@@ -49,12 +49,12 @@
         <ul class="font-raleway menu menu-horizontal px-1 text-[1E1E1E] text-sm font-[500]">
           <li class=""><a>Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a>Gallery</a></li>
-          <li><a>Feature</a></li>
-          <li><a>Product</a></li>
-          <li><a>FAQ</a></li>
-          <li><a>Review</a></li>
-          <li><a>Contact</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#featured">Feature</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#review">Review</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="navbar-end">
@@ -70,7 +70,7 @@
           </label>
          
       </div>
-          <div >
+          <div class="cursor-pointer">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
         
@@ -95,17 +95,37 @@
                 <img class="w-26" src="./assets/logo/Group (2).png" alt="">
 
                 <div class="mt-4 text-gray-700">
-                  <p class="font-semibold">Head Office</p>
-                  <p>🏠 House-5, Avenue, New York</p>
-                  <p>📞 +3234-7665545</p>
-                  <p>📧 nyx@headoffice.com</p>
+                  <h4 class="font-semibold mb-2">Head Office</h4>
+                    <ul class="list-none space-y-2 mb-5 leading-5">
+                      <li><i class="fa-solid fa-house"></i> House-5, Avenue, New York</li>
+                      <li><i class="fa-solid fa-phone"></i> +3234-7665545</li>
+                      <li><i class="fa-solid fa-envelope"></i> nyx@headoffice.com</li>
+                    </ul>
                 </div>
 
                 <div class="mt-4 flex gap-3">
-                  <button class="bg-gray-200 p-2 rounded-full">🌐</button>
-                  <button class="bg-gray-200 p-2 rounded-full">📸</button>
-                  <button class="bg-gray-200 p-2 rounded-full">✖️</button>
-                  <button class="bg-gray-200 p-2 rounded-full">🅱️</button>
+                    <ul class="flex gap-3">
+                        <li>
+                        <a href="#" class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors duration-300">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#" class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors duration-300">
+                          <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#" class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors duration-300">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#" class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors duration-300">
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                        </li>
+                    </ul>
                 </div>
 
                 <form class="mt-6 space-y-3">
@@ -159,7 +179,7 @@
     <main>
 
         <!-- Banner Section -->
-     <section class="hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
+     <section id="about" class="hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
       <div class="hero-content pt-0 grid  lg:grid-cols-2 gap-0 ">
         <img class="lg:h-[110vh] justify-self-end col-span-1" src="./assets//images/hero-img.png" alt="">
         <div class="h-[90vh] col-span-1  justify-self-start">
@@ -181,7 +201,7 @@
     </section>
 
         <!-- Featured Collection -->
-           <section class="px-6 w-10/12 mx-auto mb-10">
+           <section id="featured" class="px-6 w-10/12 mx-auto mb-10">
                <div class="flex-col space-y-3 text-center">
                 <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Featured Collection</h1>
               
@@ -300,7 +320,7 @@
            </section>
 
           <!-- Our Gallery -->
-          <section class="my-24">
+          <section id="gallery" class="my-24">
             <div class="flex-col space-y-3 text-center mb-14">
               <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Our Gallery</h1>
               <p class="sm:w-5/7 lg:w-3/7 mx-auto py-3 text-sm text-[#777] font-poppins">
@@ -309,7 +329,7 @@
             </div>
 
             <!-- Grid Container -->
-            <div class="md:grid grid-rows-2 grid-cols-14 h-screen ">
+            <div class="md:grid grid-rows-2 grid-cols-14 h-screen cursor-pointer">
               
               <!-- Image Wrapper with Inner Border -->
               <div class="relative col-span-4 row-span-2 overflow-hidden group">
@@ -428,7 +448,7 @@
       </section>
 
         <!-- Sale Up -->
-       <section class="lg:mt-56 mb-12 bg-[#cad7fa] lg:relative">
+       <section id="product" class="lg:mt-56 mb-12 bg-[#cad7fa] lg:relative">
            <div class="flex w-9/12 mx-auto">
             <div class="my-14">
                 <h3 class="font-cormorant text-4xl text-black font-bold">Sale Up to 30% Offer</h3>
@@ -445,7 +465,7 @@
 
 
         <!-- What people ask -->
-          <section class="mt-24 mb-24 w-9/12 mx-auto">
+          <section id="faq" class="mt-24 mb-24 w-9/12 mx-auto">
             <div class="flex-col space-y-3 text-center mb-10">
               <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">What People Usually Ask</h1>
               <p class="sm:w-5/7 lg:w-3/7 mx-auto py-3 text-sm text-[#777] font-poppins">
@@ -456,22 +476,22 @@
               <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300 ">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title font-semibold">Can I use this clock as a mirror?</div>
-                <div class="collapse-content text-xs text-[#949498]">Write a scene based ondeffecult is  jksdfhvhissfddg  i am asha my name is Farjana i an a pat lover i have a cat dsfgg safghgj fdghj tyfd </div>
+                <div class="collapse-content text-xs text-[#949498]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore, repellendus cum vitae magnam veniam sed, a dolorum odio doloribus laboriosam</div>
               </div>
               <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300 ">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title font-semibold">Dose the alarm sound gradually increase?</div>
-                <div class="collapse-content text-xs text-[#949498]">Write a scene based ondeffecult is  jksdfhvhissfddg  i am asha my name is Farjana i an a pat lover i have a cat dsfgg safghgj fdghj tyfd </div>
+                <div class="collapse-content text-xs text-[#949498]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore, repellendus cum vitae magnam veniam sed, a dolorum odio doloribus laboriosam</div>
               </div>
               <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title font-semibold">Can I adjust the display brightness?</div>
-                <div class="collapse-content text-xs text-[#949498]">Write a scene based ondeffecult is  jksdfhvhissfddg  i am asha my name is Farjana i an a pat lover i have a cat dsfgg safghgj fdghj tyfd </div>
+                <div class="collapse-content text-xs text-[#949498]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore, repellendus cum vitae magnam veniam sed, a dolorum odio doloribus laboriosam</div>
               </div>
               <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300 ">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title font-semibold">How dose the sneeze  function work?</div>
-                <div class="collapse-content text-xs text-[#949498]">Write a scene based ondeffecult is  jksdfhvhissfddg  i am asha my name is Farjana i an a pat lover i have a cat dsfgg safghgj fdghj tyfd </div>
+                <div class="collapse-content text-xs text-[#949498]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore, repellendus cum vitae magnam veniam sed, a dolorum odio doloribus laboriosam</div>
               </div>
              </div>
           </section>
@@ -509,7 +529,7 @@
          </section>
 
         <!-- Customer Reviews -->
-         <section class="my-24">
+         <section id="review" class="my-24">
           <div class="flex-col space-y-3 text-center mb-16">
             <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Customer Reviews</h1>
             <p class="sm:w-5/7 lg:w-3/7 mx-auto py-3 text-sm text-[#777] font-poppins">
@@ -569,7 +589,7 @@
          </section>
 
         <!-- Contact Us -->
-        <section class="flex flex-col-reverse md:flex-row w-10/12 mx-auto md:mt-24 md:mb-24">
+        <section id="contact" class="flex flex-col-reverse md:flex-row w-10/12 mx-auto md:mt-24 md:mb-24">
            <div>
             <div class="flex-col space-y-3  mb-10">
               <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Contact Us</h1>
@@ -580,13 +600,13 @@
           <!-- form -->
           <form class="font-poppins">
             <div class="mb-8  border-b-2 border-[#aeb6bf]">
-                <input type="text" placeholder="Name" class=" w-full p-2   border-none  focus:outline-none focus:ring focus:ring-blue-200 focus:rounded-box">
+                <input type="text" placeholder="Name" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box">
             </div>
             <div class="mb-8  border-b-2 border-[#aeb6bf]">
-              <input type="email" placeholder="Gmail" class=" w-full p-2   border-none  focus:outline-none focus:ring focus:ring-blue-200 focus:rounded-box">
+              <input type="email" placeholder="Gmail" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box">
           </div>
           <div class="mb-8  border-b-2 border-[#aeb6bf]">
-            <input type="text" placeholder="Message" class=" w-full p-2   border-none  focus:outline-none focus:ring focus:ring-blue-200 focus:rounded-box">
+            <input type="text" placeholder="Message" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box">
         </div>
             <button class="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition duration-300">
                 SEND
