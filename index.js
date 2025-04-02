@@ -1,3 +1,32 @@
+// active menu ____________________________
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section"); // যেই সেকশনগুলো detect করতে হবে
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  function setActiveLink() {
+    let scrollY = window.scrollY; // স্ক্রল পজিশন
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100; // Offset ঠিক করার জন্য
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        navLinks.forEach((link) => {
+          link.classList.remove("text-blue-500", "font-bold");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("text-blue-500", "font-bold");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", setActiveLink);
+  setActiveLink(); // পেজ লোড হলে একবার চালাবে
+});
+
+
 // header scrolling __________________
 
 let lastScrollTop = 0;
