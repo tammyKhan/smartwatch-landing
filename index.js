@@ -1,13 +1,13 @@
 // active menu ____________________________
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section"); // যেই সেকশনগুলো detect করতে হবে
+  const sections = document.querySelectorAll("section"); 
   const navLinks = document.querySelectorAll(".nav-link");
 
   function setActiveLink() {
-    let scrollY = window.scrollY; // স্ক্রল পজিশন
+    let scrollY = window.scrollY; 
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100; // Offset ঠিক করার জন্য
+      const sectionTop = section.offsetTop - 100; 
       const sectionHeight = section.offsetHeight;
       const sectionId = section.getAttribute("id");
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", setActiveLink);
-  setActiveLink(); // পেজ লোড হলে একবার চালাবে
+  setActiveLink(); 
 });
 
 
@@ -41,15 +41,15 @@ window.addEventListener('scroll', () => {
   if (currentScroll > 200) {
     // Scroll down (when user scrolls down)
     if (currentScroll > lastScrollTop) {
-      // header smoothly chole jabe
+     
       header.style.transition = 'transform 0.3s ease-in-out';
-      header.style.transform = 'translateY(-100%)'; // হেডারটি উপরে চলে যাবে
+      header.style.transform = 'translateY(-100%)'; 
     } else {
       // Scroll up (when user scrolls up)
-      // header smoothly asbe & bg-white hobe
+     
       header.style.transition = 'transform 0.3s ease-in-out, background-color 0.3s ease-in-out';
-      header.style.transform = 'translateY(0)'; // হেডারটি আবার আসবে
-      header.style.backgroundColor = 'white'; // ব্যাকগ্রাউন্ড সাদা হবে
+      header.style.transform = 'translateY(0)'; 
+      header.style.backgroundColor = 'white';
 
       // Add scrolled class to header
       header.classList.add('scrolled');
@@ -58,28 +58,61 @@ window.addEventListener('scroll', () => {
     // Reset header to default state when scrolled less than 200px
     header.style.transition = 'none';
     header.style.transform = 'translateY(0)';
-    header.style.backgroundColor = ''; // ডিফল্ট ব্যাকগ্রাউন্ড কালার
-    header.classList.remove('scrolled'); // Remove scrolled class
+    header.style.backgroundColor = ''; 
+    header.classList.remove('scrolled'); 
   }
 
   // Prevent negative scroll (when scrolling back to top)
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
-// search-bar popup_____
-const searchIcon = document.getElementById('search-icon');
-const searchBar = document.getElementById('search-bar');
+// fullscreen search-bar popup________________
 
-searchIcon.addEventListener('click', () => {
-    searchBar.classList.remove('scale-0');
-    searchBar.classList.add('scale-100');
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const openSearch = document.getElementById('open-search');
+  const closeSearch = document.getElementById('close-search');
+  const searchOverlay = document.getElementById('search-overlay');
+  const searchForm = document.getElementById('search-form');
+  const searchInput = document.getElementById('search-input');
+  const body = document.body;
 
-document.addEventListener('click', (event) => {
-    if (!searchBar.contains(event.target) && event.target !== searchIcon) {
-        searchBar.classList.remove('scale-100');
-        searchBar.classList.add('scale-0');
+  let scrollPosition = 0;
+
+  const openOverlay = () => {
+    scrollPosition = window.scrollY;
+    body.style.top = `-${scrollPosition}px`;
+    body.classList.add('fixed', 'w-full', 'overflow-hidden');
+
+    searchOverlay.classList.remove('scale-0', 'opacity-0');
+    searchOverlay.classList.add('scale-100', 'opacity-100');
+  };
+
+  const closeOverlay = () => {
+    searchOverlay.classList.remove('scale-100', 'opacity-100');
+    searchOverlay.classList.add('scale-0', 'opacity-0');
+
+    body.classList.remove('fixed', 'w-full', 'overflow-hidden');
+    body.style.top = '';
+    window.scrollTo(0, scrollPosition);
+
+    // Clear the search input after close (optional)
+    searchInput.value = '';
+  };
+
+  openSearch.addEventListener('click', openOverlay);
+  closeSearch.addEventListener('click', closeOverlay);
+
+  // Handle form submit
+  searchForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // prevent page reload
+    const query = searchInput.value.trim();
+
+    if (query) {
+      console.log('Searching for:', query);
+      // Optional: here you can fetch search results, redirect, etc.
+      closeOverlay(); // close after search
     }
+  });
 });
 
 

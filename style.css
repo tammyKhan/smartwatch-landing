@@ -42,6 +42,13 @@ header.scrolled {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 9998;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow when the header is scrolled */
+}
+.custom-gradient {
+  background-size: 200% auto;
+  background-position: left center;
+}
+.custom-gradient:hover {
+  background-position: right center;
 }

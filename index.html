@@ -49,7 +49,7 @@
         <ul
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[50] mt-3 w-52 p-2 shadow left-0">
-        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#gallery" class="nav-link">Gallery</a></li>
         <li><a href="#featured" class="nav-link">Feature</a></li>
@@ -64,7 +64,7 @@
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="font-raleway menu menu-horizontal px-1 text-[1E1E1E] text-sm font-[500]">
-          <li><a href="#" class="nav-link hover:text-blue-500 active:text-blue-500 focus:text-blue-500 hover:bg-transparent focus:!bg-transparent active:!bg-transparent">Home</a></li>
+          <li><a href="#home" class="nav-link hover:text-blue-500 active:text-blue-500 focus:text-blue-500 hover:bg-transparent focus:!bg-transparent active:!bg-transparent">Home</a></li>
           <li><a href="#about" class="nav-link hover:text-blue-500 active:text-blue-500 focus:text-blue-500 hover:bg-transparent focus:!bg-transparent active:!bg-transparent">About</a></li>
           <li><a href="#gallery" class="nav-link hover:text-blue-500 active:text-blue-500 focus:text-blue-500 hover:bg-transparent focus:!bg-transparent active:!bg-transparent">Gallery</a></li>
           <li><a href="#featured" class="nav-link hover:text-blue-500 active:text-blue-500 focus:text-blue-500 hover:bg-transparent focus:!bg-transparent active:!bg-transparent">Feature</a></li>
@@ -76,39 +76,44 @@
       </div>
       <div class="navbar-end">
        <div class=" mr-3 flex  justify-center items-center  gap-3">
-        
-        <div>
-          <i id="search-icon" class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+
+      <div>
+        <i id="open-search" class="fa-solid fa-magnifying-glass cursor-pointer"></i>
       </div>
-      <div id="search-bar" class="absolute right-0 top-12 w-[400px] p-3 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg transform scale-0 origin-top transition-transform duration-300 ease-in-out">
-          <label class="input relative w-full">
-              <svg class="h-[1em] opacity-50 absolute left-2 top-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
-              <input type="search" required placeholder="Search" class="w-full pl-8 p-2 border-none"/>
-          </label>
-         
-      </div>
+
           <a href="#featured" class="cursor-pointer">
             <i class="fa-solid fa-cart-shopping"></i>
           </a>
-        
-                    <!-- ____________________ -->
-         
 
           <!-- Sidebar Open Button -->
           <img id="openSidebar" class="cursor-pointer" src="./assets/icon/menu.png" alt="">
-         <!-- ________________ -->
-      
-
+         
        </div>
      </div>
-
-
-     
-    </div>
-
-   
-    
+    </div> 
+  
  </header> 
+   
+    <!-- Fullscreen Overlay Search Box -->
+    <div id="search-overlay" class="fixed inset-0 bg-white z-50 flex items-center justify-center scale-0 opacity-0 transition-all duration-500 ease-in-out">
+      <!-- Close Button -->
+      <button id="close-search" class="cursor-pointer absolute top-6 right-6 bg-purple-500 hover:bg-purple-600 text-white rounded p-2 text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Search Box -->
+      <form id="search-form" class="flex w-full max-w-xl shadow-md">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search ..."
+          class="w-full px-4 py-3 border border-gray-300 focus:outline-none"
+        />
+        <button type="submit" class="cursor-pointer bg-purple-500 hover:bg-purple-600 text-white px-6">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
 
    <!-- Sidebar Wrapper (Includes Overlay & Sidebar) -->
            
@@ -186,29 +191,42 @@
     <main>
 
         <!-- Banner Section -->
-     <section id="about" class=" hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
+     <section id="home" class=" hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
       <div class="hero-content pt-0 grid  md:grid-cols-2 gap-0 ">
         <img class=" h-[80vh] md:h-[90vh] lg:h-[110vh] justify-self-center lg:justify-self-end col-span-1" src="./assets//images/hero-img.png" alt="">
         <div class="h-[90vh] col-span-1  justify-self-start ml-3 lg:ml-0">
-          <div class="h-[60vh] flex flex-col justify-end mr-10 bg-contain  bg-[url('./assets/images/hero-circle.png')] bg-no-repeat bg-right-top">
+          <div class="h-[60vh] flex flex-col justify-center mr-10 bg-contain  bg-[url('./assets/images/hero-circle.png')] bg-no-repeat bg-right-top">
             <h1 class="bg-gradient-to-r from-[#2887ff] to-[#973fff] text-transparent bg-clip-text border-b-2 pb-6 border-[#22acff] w-5/6 font-cormorant text-4xl lg:text-5xl font-bold">
             Your Favorite Watch
           </h1>
           
           
-          <p class="py-6 w-5/6 text-[#777] font-medium font-poppins">
+          <p class="pt-6 w-5/6 text-[#777] font-medium font-poppins">
             There are many variations of passages of Lorem Ipsum available in some form others.
           </p>
         </div>
-          <button class="btn rounded-3xl mt-6 px-8 bg-gradient-to-r from-[#2887ff] to-[#973fff] font-poppins text-white ">
-            <i class="fa-solid fa-cart-shopping"></i>
-            Add to cart</button>
+        <button class="btn rounded-3xl  px-8 font-poppins text-white relative overflow-hidden transition-all duration-700 ease-in-out group">
+    <span class="absolute inset-0 bg-gradient-to-r from-[#2887ff] to-[#973fff] transition-all duration-700 ease-in-out opacity-100 group-hover:opacity-0"></span>
+    <span class="absolute inset-0 bg-gradient-to-r from-[#973fff] to-[#2887ff] transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100"></span>
+    <span class="relative z-10 flex items-center gap-2">
+        <i class="fa-solid fa-cart-shopping"></i> Add to cart
+    </span>
+</button>
+
+<!-- <button class="btn rounded-3xl mt-6 px-8 font-poppins text-white relative overflow-hidden transition-all duration-700 ease-in-out group">
+  <span class="absolute inset-0 bg-gradient-to-r from-[#2887ff] to-[#973fff] transition-all duration-700 ease-in-out group-hover:from-[#973fff] group-hover:to-[#2887ff]"></span>
+  <span class="relative z-10 flex items-center gap-2">
+      <i class="fa-solid fa-cart-shopping"></i> Add to cart
+  </span>
+</button> -->
+      
+      
         </div>
       </div>
     </section>
 
         <!-- Featured Collection -->
-           <section id="featured" class="px-6 w-10/12 mx-auto mb-10">
+           <section id="about" class="px-6 w-10/12 mx-auto mb-10">
                <div class="flex-col space-y-3 text-center">
                 <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Featured Collection</h1>
               
@@ -226,15 +244,15 @@
                           <img src="./assets/images/featured-img-1.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
                           <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
                           <div class="flex justify-center items-center mt-4 bg-[#f5e0ff]   w-fit mx-auto">
-                            <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn">
+                            <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
                               <i class="fa-solid fa-minus"></i>
                             </button>
                             <span class="px-3 text-sm font-raleway count">1</span>
-                            <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn">
+                            <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
                               <i class="fa-solid fa-plus"></i>
                             </button>
                         </div>
-                        <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                        <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
                           <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                       </div>
                      <!-- card-2 -->
@@ -243,15 +261,15 @@
                       <img src="./assets/images/featured-img-2.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
                       <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
                       <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
-                        <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn">
+                        <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
                           <i class="fa-solid fa-minus"></i>
                         </button>
                         <span class="px-3 text-sm font-raleway count">1</span>
-                        <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn">
+                        <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
                           <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
-                    <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                    <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
                       <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                   </div>
                       <!-- card-3 -->
@@ -260,15 +278,15 @@
                         <img src="./assets/images/featured-img-3.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
                         <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
                         <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
-                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn">
+                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
                             <i class="fa-solid fa-minus"></i>
                           </button>
                           <span class="px-3 text-sm font-raleway count">1</span>
-                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn">
+                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
                             <i class="fa-solid fa-plus"></i>
                           </button>
                       </div>
-                      <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
                         <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                     </div>
                       <!-- card-4 -->
@@ -277,15 +295,15 @@
                         <img src="./assets/images/featured-img-2.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
                         <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
                         <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
-                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn">
+                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
                             <i class="fa-solid fa-minus"></i>
                           </button>
                           <span class="px-3 text-sm font-raleway count">1</span>
-                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn">
+                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
                             <i class="fa-solid fa-plus"></i>
                           </button>
                       </div>
-                      <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
                         <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                     </div>
                       <!-- card-5 -->
@@ -294,15 +312,15 @@
                         <img src="./assets/images/featured-img-3.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
                         <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
                         <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
-                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn">
+                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
                             <i class="fa-solid fa-minus"></i>
                           </button>
                           <span class="px-3 text-sm font-raleway count">1</span>
-                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn">
+                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
                             <i class="fa-solid fa-plus"></i>
                           </button>
                       </div>
-                      <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
                         <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                     </div>
 
@@ -379,7 +397,7 @@
 
 
       <!-- Special Features -->
-    <section class="mb-24">
+    <section id="featured" class="mb-24">
       <div class="flex-col space-y-3 text-center mb-14">
         <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Special Features</h1>
         <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
@@ -503,7 +521,7 @@
         <div class="my-14 text-center lg:text-left">
           <h3 class="font-cormorant text-4xl text-black font-bold">Sale Up to 30% Offer</h3>
           <p class="font-poppins text-base text-[#777] mt-3 lg:w-2/3 mx-auto lg:mx-0">There are many variations of passages of Lorem Ipsum available in some form, </p>
-          <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+          <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs cursor-pointer">
             <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now
           </button>
         </div>
@@ -658,7 +676,7 @@
           <div class="mb-8  border-b-2 border-[#aeb6bf]">
             <input type="text" placeholder="Message" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box">
         </div>
-            <button class="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition duration-300">
+            <button class="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition duration-300 cursor-pointer">
                 SEND
             </button>
         </form>
