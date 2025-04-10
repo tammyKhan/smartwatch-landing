@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- daisyUI cdn-->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <!-- daisyUI cdn--- -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   
-
+  
   <!-- Font-awesome -->
  <script src="https://kit.fontawesome.com/44b771e9c2.js" crossorigin="anonymous"></script>
 
@@ -27,19 +27,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   
-  <!-- Owl Carousel CSS (Use CDN) -->
+  <!-- Owl Carousel CSS ( CDN) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
 
   <link rel="stylesheet" href="./style.css">
 
   <title>Snyx</title>
 </head>
+<!-- bg-gradient-to-r from-[#d3eeff] to-[#fdedfe]  -->
 
-<body class="bg-gradient-to-r from-[#d3eeff] to-[#fdedfe] ">
+<body class=" transition-colors duration-300">
+
+   <!-- Toggle Button -->
+   <div class="fixed top-50 right-0 z-50">
+    <button
+      id="theme-toggle"
+      class="px-4 py-2 font-semibold shadow-lg bg-gray-600 text-white hover:bg-gray-700 transition cursor-pointer"
+    >
+      Dark
+    </button>
+  </div>
+
  <!-- Header -->
- <header class="lg:px-6 mx-auto relative">
+ <header class="lg:px-6 mx-auto relative ">
   <div  class="navbar  mx-auto">
     <div class="navbar-start">
       <div class="dropdown">
@@ -60,7 +71,10 @@
       </ul>
       </div>
       
-        <img class="w-26" src="./assets/logo/Group (2).png" alt="">
+        <div class="mb-4 flex gap-1 items-center ">
+          <img class="h-5 w-8 mt-3 " src="./assets/logo/Group (3).png" alt="logo">
+          <h2 class="text-3xl font-bold dark:text-white tracking-wider">nyx</h2>
+         </div>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="font-raleway menu menu-horizontal px-1 text-[1E1E1E] text-sm font-[500]">
@@ -78,15 +92,15 @@
        <div class=" mr-3 flex  justify-center items-center  gap-3">
 
       <div>
-        <i id="open-search" class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+        <i id="open-search" class="fa-solid fa-magnifying-glass cursor-pointer dark:text-white"></i>
       </div>
 
-          <a href="#featured" class="cursor-pointer">
-            <i class="fa-solid fa-cart-shopping"></i>
+          <a href="#" class="cursor-pointer">
+            <i class="fa-solid fa-cart-shopping dark:text-white"></i>
           </a>
 
           <!-- Sidebar Open Button -->
-          <img id="openSidebar" class="cursor-pointer" src="./assets/icon/menu.png" alt="">
+          <img id="openSidebar" class="cursor-pointer dark:img-white" src="./assets/icon/menu.png" alt="">
          
        </div>
      </div>
@@ -97,7 +111,7 @@
     <!-- Fullscreen Overlay Search Box -->
     <div id="search-overlay" class="fixed inset-0 bg-white z-50 flex items-center justify-center scale-0 opacity-0 transition-all duration-500 ease-in-out">
       <!-- Close Button -->
-      <button id="close-search" class="cursor-pointer absolute top-6 right-6 bg-purple-500 hover:bg-purple-600 text-white rounded p-2 text-xl">
+      <button id="close-search" class="cursor-pointer absolute top-6 right-6 bg-blue-500 hover:bg-blue-600 text-white rounded p-2 text-xl">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
@@ -109,7 +123,7 @@
           placeholder="Search ..."
           class="w-full px-4 py-3 border border-gray-300 focus:outline-none"
         />
-        <button type="submit" class="cursor-pointer bg-purple-500 hover:bg-purple-600 text-white px-6">
+        <button type="submit" class="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white px-6">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
@@ -128,7 +142,7 @@
       
       <!-- Close Button -->
       <div id="closeSidebar" class=" absolute top-4 right-4 cursor-pointer">
-        <i class="fa-solid fa-xmark hover:text-red-600 text-lg"></i>
+        <i class="fa-solid fa-xmark text-black hover:text-red-600 text-lg"></i>
       </div>
 
       <!-- Sidebar Content -->
@@ -145,8 +159,8 @@
         </div>
 
         <div class="mt-4 flex gap-3">
-            <ul class="flex gap-3">
-                <li>
+            <ul class="flex gap-3 text-gray-700">
+                <li >
                 <a href="#" class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors duration-300">
                   <i class="fa-brands fa-facebook"></i>
                 </a>
@@ -170,10 +184,10 @@
         </div>
 
         <form class="mt-6 space-y-3">
-          <input type="text" placeholder="Name" class="w-full p-2 border rounded">
-          <input type="email" placeholder="Email" class="w-full p-2 border rounded">
-          <input type="text" placeholder="Subject" class="w-full p-2 border rounded">
-          <textarea placeholder="Message" class="w-full p-2 border rounded h-24"></textarea>
+          <input type="text" placeholder="Name" class="w-full p-2 border rounded text-gray-700">
+          <input type="email" placeholder="Email" class="w-full p-2 border rounded text-gray-700">
+          <input type="text" placeholder="Subject" class="w-full p-2 border rounded text-gray-700">
+          <textarea placeholder="Message" class="w-full p-2 border rounded h-24 text-gray-700"></textarea>
           <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
             Submit
           </button>
@@ -181,7 +195,7 @@
 
         <div class="mt-6 space-y-4">
           <p class="text-gray-600">Additional Information</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
     </div>
@@ -194,9 +208,10 @@
      <section id="home" class=" hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
       <div class="hero-content pt-0 grid  md:grid-cols-2 gap-0 ">
         <img class=" h-[80vh] md:h-[90vh] lg:h-[110vh] justify-self-center lg:justify-self-end col-span-1" src="./assets//images/hero-img.png" alt="">
+       
         <div class="h-[90vh] col-span-1  justify-self-start ml-3 lg:ml-0">
-          <div class="h-[60vh] flex flex-col justify-center mr-10 bg-contain  bg-[url('./assets/images/hero-circle.png')] bg-no-repeat bg-right-top">
-            <h1 class="bg-gradient-to-r from-[#2887ff] to-[#973fff] text-transparent bg-clip-text border-b-2 pb-6 border-[#22acff] w-5/6 font-cormorant text-4xl lg:text-5xl font-bold">
+          <div class="h-[60vh] flex flex-col justify-center mr-10 bg-contain  bg-[url('./assets/images/hero-circle.png')] bg-no-repeat bg-right-top dark-remove-bg ">
+            <h1 class="bg-gradient-to-r from-[#2887ff] to-[#973fff] text-transparent bg-clip-text border-b-2 pb-6 border-[#22acff] w-5/6 font-cormorant text-4xl lg:text-5xl font-bold ">
             Your Favorite Watch
           </h1>
           
@@ -205,21 +220,10 @@
             There are many variations of passages of Lorem Ipsum available in some form others.
           </p>
         </div>
-        <button class="btn rounded-3xl  px-8 font-poppins text-white relative overflow-hidden transition-all duration-700 ease-in-out group">
-    <span class="absolute inset-0 bg-gradient-to-r from-[#2887ff] to-[#973fff] transition-all duration-700 ease-in-out opacity-100 group-hover:opacity-0"></span>
-    <span class="absolute inset-0 bg-gradient-to-r from-[#973fff] to-[#2887ff] transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100"></span>
-    <span class="relative z-10 flex items-center gap-2">
+        <button class="btn rounded-3xl mt-6 px-10 font-poppins text-white    absolute bg-gradient-to-r from-[#2887ff] to-[#973fff] transition-all duration-400 ease-in-out hover:bg-gradient-to-l hover:opacity-80 hover:scale-105">
         <i class="fa-solid fa-cart-shopping"></i> Add to cart
-    </span>
-</button>
-
-<!-- <button class="btn rounded-3xl mt-6 px-8 font-poppins text-white relative overflow-hidden transition-all duration-700 ease-in-out group">
-  <span class="absolute inset-0 bg-gradient-to-r from-[#2887ff] to-[#973fff] transition-all duration-700 ease-in-out group-hover:from-[#973fff] group-hover:to-[#2887ff]"></span>
-  <span class="relative z-10 flex items-center gap-2">
-      <i class="fa-solid fa-cart-shopping"></i> Add to cart
-  </span>
-</button> -->
-      
+       </button>
+ 
       
         </div>
       </div>
@@ -228,7 +232,7 @@
         <!-- Featured Collection -->
            <section id="about" class="px-6 w-10/12 mx-auto mb-10">
                <div class="flex-col space-y-3 text-center">
-                <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Featured Collection</h1>
+                <h1 class="text-4xl text-[#17256a] dark:text-gray font-extrabold font-cormorant">Featured Collection</h1>
               
                 <p class="sm:w-5/7 lg:w-3/7 text-sm mx-auto py-3  text-[#777]  font-poppins">
                   There are many variations of passages of Lorem Ipsum available in some form, 
@@ -239,107 +243,103 @@
                   <!-- Product Cards -->
                   <div class=" owl-carousel featured_item w-9/12">
                     <!-- card-1 -->
-                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center ">
+                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900">
                           <span class="absolute bg-[#00a1ff] font-bold text-white text-sm flex items-center justify-center h-13 w-13  rounded-full top-6 left-6">$99/-</span>
                           <img src="./assets/images/featured-img-1.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
-                          <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
-                          <div class="flex justify-center items-center mt-4 bg-[#f5e0ff]   w-fit mx-auto">
-                            <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
+                          <h3 class="font-semibold text-lg font-raleway text-[#475496] dark:text-white">Waterproof Design</h3>
+                          <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] dark:bg-gray-900   w-fit mx-auto">
+                            <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer hover:bg-violet-600">
                               <i class="fa-solid fa-minus"></i>
                             </button>
-                            <span class="px-3 text-sm font-raleway count">1</span>
-                            <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
+                            <span class="px-3 text-sm font-raleway count dark:text-white">1</span>
+                            <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer hover:bg-violet-600">
                               <i class="fa-solid fa-plus"></i>
                             </button>
                         </div>
-                        <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                        <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-115 transition-transform font-poppins text-xs hover:scale-110 hover:bg-gradient-to-l hover:opacity-80">
                           <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                       </div>
                      <!-- card-2 -->
-                     <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center">
+                     <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900">
                       <span class="absolute bg-[#00a1ff] font-bold text-white text-sm flex items-center justify-center h-13 w-13  rounded-full top-6 left-6">$99/-</span>
                       <img src="./assets/images/featured-img-2.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
-                      <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
-                      <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
-                        <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
+                      <h3 class="font-semibold text-lg font-raleway text-[#475496] dark:text-white">Waterproof Design</h3>
+                      <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] dark:bg-gray-900 rounded-lg  w-fit mx-auto">
+                        <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer hover:bg-violet-600">
                           <i class="fa-solid fa-minus"></i>
                         </button>
-                        <span class="px-3 text-sm font-raleway count">1</span>
-                        <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
+                        <span class="px-3 text-sm font-raleway count dark:text-white">1</span>
+                        <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer hover:bg-violet-600">
                           <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
-                    <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                    <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-115 transition-transform font-poppins text-xs hover:scale-110 hover:bg-gradient-to-l hover:opacity-80">
                       <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                   </div>
                       <!-- card-3 -->
-                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center">
+                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900">
                         <span class="absolute bg-[#00a1ff] font-bold text-white text-sm flex items-center justify-center h-13 w-13  rounded-full top-6 left-6">$99/-</span>
                         <img src="./assets/images/featured-img-3.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
-                        <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
-                        <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
-                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
+                        <h3 class="font-semibold text-lg dark:text-white font-raleway text-[#475496]">Waterproof Design</h3>
+                        <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] dark:bg-gray-900 rounded-lg  w-fit mx-auto">
+                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer hover:bg-violet-600">
                             <i class="fa-solid fa-minus"></i>
                           </button>
-                          <span class="px-3 text-sm font-raleway count">1</span>
-                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
+                          <span class="px-3 text-sm font-raleway count dark:text-white">1</span>
+                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer hover:bg-violet-600">
                             <i class="fa-solid fa-plus"></i>
                           </button>
                       </div>
-                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-115 transition-transform font-poppins text-xs hover:scale-110 hover:bg-gradient-to-l hover:opacity-80">
                         <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                     </div>
                       <!-- card-4 -->
-                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center">
+                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900">
                         <span class="absolute bg-[#00a1ff] font-bold text-white text-sm flex items-center justify-center h-13 w-13  rounded-full top-6 left-6">$99/-</span>
                         <img src="./assets/images/featured-img-2.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
-                        <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
-                        <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
-                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
+                        <h3 class="font-semibold text-lg dark:text-white font-raleway text-[#475496]">Waterproof Design</h3>
+                        <div class="flex justify-center items-center mt-4 dark:bg-gray-900 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
+                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer hover:bg-violet-600">
                             <i class="fa-solid fa-minus"></i>
                           </button>
-                          <span class="px-3 text-sm font-raleway count">1</span>
-                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
+                          <span class="px-3 text-sm font-raleway count dark:text-white">1</span>
+                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer hover:bg-violet-600">
                             <i class="fa-solid fa-plus"></i>
                           </button>
                       </div>
-                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-115 transition-transform font-poppins text-xs hover:scale-110 hover:bg-gradient-to-l hover:opacity-80">
                         <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                     </div>
                       <!-- card-5 -->
-                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center">
+                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900">
                         <span class="absolute bg-[#00a1ff] font-bold text-white text-sm flex items-center justify-center h-13 w-13  rounded-full top-6 left-6">$99/-</span>
                         <img src="./assets/images/featured-img-3.png" class="h-[40vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8 ">
-                        <h3 class="font-semibold text-xl font-raleway text-[#475496]">Waterproof Design</h3>
-                        <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] rounded-lg  w-fit mx-auto">
-                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer">
-                            <i class="fa-solid fa-minus"></i>
+                        <h3 class="font-semibold text-lg dark:text-white font-raleway text-[#475496]">Waterproof Design</h3>
+                        <div class="flex justify-center items-center mt-4 bg-[#f5e0ff] dark:bg-gray-900 rounded-lg  w-fit mx-auto">
+                          <button class="bg-[#5f1af3]  px-2 py-1 font-bold text-white rounded-lg minus-btn cursor-pointer hover:bg-violet-600">
+                            <i class="fa-solid fa-minus "></i>
                           </button>
-                          <span class="px-3 text-sm font-raleway count">1</span>
-                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer">
+                          <span class="px-3 text-sm font-raleway count dark:text-white">1</span>
+                          <button class="bg-[#5f1af3] px-2 py-1 rounded-lg font-bold text-white plus-btn cursor-pointer hover:bg-violet-600">
                             <i class="fa-solid fa-plus"></i>
                           </button>
                       </div>
-                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs">
+                      <button class="mt-6 cursor-pointer bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-110 hover:bg-gradient-to-l hover:opacity-80 transition-transform font-poppins text-xs">
                         <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                     </div>
 
               </div>
 
                         <!-- Left Button -->
-              <button id="customPrev" class="absolute top-1/2 left-[-60px] transform -translate-y-1/2 bg-gradient-to-r from-[#2589FB] to-[#9941F0]  text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg  transition-all cursor-pointer">
+                      
+              <button id="customPrev" class="absolute top-1/2 left-[-60px] transform -translate-y-1/2 bg-gradient-to-r from-[#2589FB] to-[#9941F0]  text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg  transition-all cursor-pointer hover:scale-110 hover:bg-gradient-to-l hover:opacity-80">
                 <i class="fa-solid fa-arrow-left text-2xl"></i>
               </button>
 
               <!-- Right Button -->
-              <button id="customNext" class="absolute top-1/2 right-[-60px] transform -translate-y-1/2 bg-gradient-to-r from-[#2589FB] to-[#9941F0] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg  transition-all cursor-pointer">
+              <button id="customNext" class="absolute top-1/2 right-[-60px] transform -translate-y-1/2 bg-gradient-to-r from-[#2589FB] to-[#9941F0] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg  transition-all cursor-pointer hover:scale-110 hover:bg-gradient-to-l hover:opacity-80">
                 <i class="fa-solid fa-arrow-right text-2xl"></i>
               </button>
-
-               <!-- Right Button -->
-                  <!-- <button class="absolute right-0 bg-gradient-to-r from-[#2589FB] to-[#9941F0] text-white  flex items-center justify-center h-13 w-13 rounded-full shadow-lg">
-                    
-                  </button> -->
               
                </div>
            </section>
@@ -347,7 +347,7 @@
          <!-- Our Gallery -->
     <section id="gallery" class="my-24">
       <div class="flex-col space-y-3 text-center mb-14">
-        <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Our Gallery</h1>
+        <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant dark:text-gray">Our Gallery</h1>
         <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
           There are many variations of passages of Lorem Ipsum available in some form.
         </p>
@@ -358,38 +358,38 @@
 
         <!-- Image Wrapper with Inner Border -->
         <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 lg:row-span-2 overflow-hidden group">
-          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[90vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[90vh] transition-transform duration-500 ease-in-out group-hover:scale-110 " 
               src="./assets/images/Gallery-1.jpg" 
               alt="Gallery Image">
-          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
         </div>
 
         <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-6  overflow-hidden group">
-          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110 " 
               src="./assets/images/Gallery-2.jpg" 
               alt="Gallery Image">
-          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
         </div>
 
         <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 overflow-hidden group">
-          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110 " 
               src="./assets/images/gallery-3.jpg" 
               alt="Gallery Image">
-          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
         </div>
 
         <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 overflow-hidden group">
           <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
               src="./assets/images/gallery-4.jpg" 
               alt="Gallery Image">
-          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
         </div>
 
         <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-6 lg:row-span-1 overflow-hidden group">
-          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
+          <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110 " 
               src="./assets/images/gallery-5.jpg" 
               alt="Gallery Image">
-          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-95"></div>
+          <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
         </div>
 
       </div>
@@ -397,9 +397,9 @@
 
 
       <!-- Special Features -->
-    <section id="featured" class="mb-24">
+    <section id="featured" class="mb-24 ">
       <div class="flex-col space-y-3 text-center mb-14">
-        <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Special Features</h1>
+        <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant dark:text-gray">Special Features</h1>
         <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
           There are many variations of passages of Lorem Ipsum available in some form.
         </p>
@@ -412,7 +412,7 @@
         <div class="hidden lg:block space-y-10 sm:space-y-16 lg:space-y-28">
           <div class="flex gap-3 sm:justify-center lg:justify-end ml-20 lg:ml-0  lg:mr-1">
             <div class="font-poppins w-2/3 text-end">
-              <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Smart Notification</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum  available</p>
             </div>
             <div class="h-9 w-9 rounded-full bg-[#0068e1] text-white flex items-center justify-center">
@@ -421,7 +421,7 @@
           </div>
           <div class="flex gap-3 sm:justify-center lg:justify-end ml-20 lg:ml-0">
             <div class="font-poppins w-2/3 text-end">
-              <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Smart Notification</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
             </div>
             <div class=" lg:mr-10 h-9 w-9 rounded-full bg-[#23098a] text-white flex items-center justify-center">
@@ -430,7 +430,7 @@
           </div>
           <div class="flex gap-3 sm:justify-center lg:justify-end ml-20 lg:ml-0 mr-1">
             <div class="font-poppins w-2/3 text-end">
-              <h4 class="text-sm font-semibold text-black mb-2">Waterproof Rellability</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Waterproof Rellability</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available </p>
             </div>
             <div class="h-9 w-9 rounded-full bg-[#ff8f61] text-white flex items-center justify-center">
@@ -446,7 +446,7 @@
               <i class="fa-solid fa-stopwatch text-base"></i>
             </div>
             <div class="font-poppins w-2/3">
-              <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Smart Notification</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum  available</p>
             </div>
           </div>
@@ -455,7 +455,7 @@
               <i class="fa-solid fa-fire-flame-simple"></i>
             </div>
             <div class="font-poppins w-2/3 ">
-              <h4 class="text-sm font-semibold text-black mb-2">Smart Notification</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Smart Notification</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
             </div>
           </div>
@@ -464,7 +464,7 @@
               <img class="w-4" src="./assets/icon/special-icon.png" alt="">
             </div>
             <div class="font-poppins w-2/3 ">
-              <h4 class="text-sm font-semibold text-black mb-2">Waterproof Rellability</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Waterproof Rellability</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available </p>
             </div>
           </div>
@@ -472,7 +472,7 @@
 
         <!-- image container -->
         <div class="flex justify-center items-center">
-          <img class="h-[50vh] lg:h-[70vh] max-w-full" src="./assets/images/special.png" alt="">
+          <img class="h-[50vh] lg:h-[70vh] max-w-full " src="./assets/images/special.png" alt="">
         </div>
 
         <!-- content-2 -->
@@ -482,7 +482,7 @@
               <img class="h-4 w-4" src="./assets/icon/H.svg" alt="">
             </div>
             <div class="font-poppins w-2/3">
-              <h4 class="text-sm font-semibold text-black mb-2">Health Monitoring</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Health Monitoring</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
             </div>
           </div>
@@ -491,7 +491,7 @@
               <i class="fa-brands fa-canadian-maple-leaf"></i>
             </div>
             <div class="font-poppins w-2/3">
-              <h4 class="text-sm font-semibold text-black mb-2">Health Monitoring</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Health Monitoring</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
             </div>
           </div>
@@ -500,7 +500,7 @@
               <i class="fa-solid fa-gear"></i>
             </div>
             <div class="font-poppins w-2/3">
-              <h4 class="text-sm font-semibold text-black mb-2">Interchangeable Straps</h4>
+              <h4 class="text-sm font-semibold text-black dark:text-gray mb-2">Interchangeable Straps</h4>
               <p class="text-xs text-[#777]">There are many variations of passages of Lorem Ipsum available, </p>
             </div>
           </div>
@@ -510,7 +510,7 @@
 
 
        <!-- Sale Up -->
-    <section id="product" class="lg:mt-56 mb-12 bg-[#cad7fa] lg:relative">
+    <section id="product" class="lg:mt-56 mb-12 bg-[#cad7fa] dark:bg-black lg:relative">
       <div class="flex flex-col lg:flex-row w-9/12 mx-auto">
         <!-- Image Section -->
         <div class="relative lg:absolute lg:right-20 lg:top-[-45%] mt-6 lg:mt-0 mx-auto">
@@ -519,9 +519,9 @@
 
         <!-- Content Section -->
         <div class="my-14 text-center lg:text-left">
-          <h3 class="font-cormorant text-4xl text-black font-bold">Sale Up to 30% Offer</h3>
+          <h3 class="font-cormorant text-4xl text-black dark:text-white font-bold">Sale Up to 30% Offer</h3>
           <p class="font-poppins text-base text-[#777] mt-3 lg:w-2/3 mx-auto lg:mx-0">There are many variations of passages of Lorem Ipsum available in some form, </p>
-          <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition-transform font-poppins text-xs cursor-pointer">
+          <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:bg-gradient-to-l hover:opacity-80 hover:scale-105 transition-transform font-poppins text-xs cursor-pointer">
             <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now
           </button>
         </div>
@@ -533,32 +533,32 @@
 
 
         <!-- What people ask -->
-          <section id="faq" class="mt-24 mb-24 w-9/12 mx-auto">
+          <section id="faq" class="mt-24 mb-24 w-10/12 mx-auto">
             <div class="flex-col space-y-3 text-center mb-10">
-              <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">What People Usually Ask</h1>
+              <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant dark:text-gray">What People Usually Ask</h1>
               <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
                 There are many variations of passages of Lorem Ipsum available in some form.
               </p>
             </div>
              <div class="grid lg:grid-cols-2 gap-5">
               <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300 ">
-                <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title font-semibold">Can I use this clock as a mirror?</div>
+                <input class="" type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title font-semibold dark:text-black">Can I use this clock as a mirror?</div>
                 <div class="collapse-content text-xs text-[#949498]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore, repellendus cum vitae magnam veniam sed, a dolorum odio doloribus laboriosam</div>
               </div>
-              <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300 ">
+              <div class="collapse collapse-plus  bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300 ">
                 <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title font-semibold">Dose the alarm sound gradually increase?</div>
+                <div class="collapse-title font-semibold dark:text-black">Dose the alarm sound gradually increase?</div>
                 <div class="collapse-content text-xs text-[#949498]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore, repellendus cum vitae magnam veniam sed, a dolorum odio doloribus laboriosam</div>
               </div>
               <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300">
                 <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title font-semibold">Can I adjust the display brightness?</div>
+                <div class="collapse-title font-semibold dark:text-black">Can I adjust the display brightness?</div>
                 <div class="collapse-content text-xs text-[#949498]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore, repellendus cum vitae magnam veniam sed, a dolorum odio doloribus laboriosam</div>
               </div>
               <div class="collapse collapse-plus bg-gradient-to-r shadow-md from-[#d2efff] to-[#fdeeff] border border-base-300 ">
                 <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title font-semibold">How dose the sneeze  function work?</div>
+                <div class="collapse-title font-semibold dark:text-black">How dose the sneeze  function work?</div>
                 <div class="collapse-content text-xs text-[#949498]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore, repellendus cum vitae magnam veniam sed, a dolorum odio doloribus laboriosam</div>
               </div>
              </div>
@@ -571,7 +571,7 @@
               <img class="h-[80vh]" src="./assets/images/attractive.png" alt="">
           </div>
           <div class="flex-1">
-             <h2 class="text-4xl font-bold font-cormorant mb-10 text-[#17256a]">Watches Your Attractive</h2>
+             <h2 class="text-4xl font-bold font-cormorant mb-10 text-[#17256a] dark:text-gray">Watches Your Attractive</h2>
              <div class="mb-9 font-poppins text-xs flex gap-3 items-start text-[#777777]">
               <img class="mt-0" src="./assets/icon/hand.svg" alt="">
               <p>
@@ -590,8 +590,9 @@
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
               </p>
              </div>
-             <button class="btn rounded-3xl mt-6 px-10 bg-gradient-to-r from-[#2887ff] to-[#973fff] font-poppins text-white font-light">
-              Learn More</button>
+              <button class="btn rounded-3xl mt-6 px-10 font-poppins text-white    absolute bg-gradient-to-r from-[#2887ff] to-[#973fff] transition-all duration-400 ease-in-out font-light hover:bg-gradient-to-l hover:opacity-80 hover:scale-105">
+                  Learn More
+                  </button>
           </div>
           </div>
          </section>
@@ -599,7 +600,7 @@
         <!-- Customer Reviews -->
          <section id="review" class="my-24">
           <div class="flex-col space-y-3 text-center mb-16">
-            <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Customer Reviews</h1>
+            <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant dark:text-gray">Customer Reviews</h1>
             <p class="w-5/7 md:w-3/7  mx-auto py-3 text-sm text-[#777] font-poppins">
               There are many variations of passages of Lorem Ipsum available in some form.
             </p>
@@ -609,47 +610,47 @@
               <div class="animate-scroll flex space-x-6">
       
                   <!-- Review Card -->
-                  <div class="w-xs bg-[#f1f7ff] shadow-lg rounded-lg p-6 text-center">
+                  <div class="w-xs bg-[#f1f7ff] dark:bg-gray-900 shadow-lg rounded-lg p-6 text-center">
                       <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="./assets/images/Mask group.png" alt="User">
-                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6] dark:text-white ">Thereas Web</h3>
                       <div class="flex justify-center text-yellow-500 mb-2">
                           ★★★★★
                       </div>
-                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                      <p class="text-gray-600 text-sm text-wrap overflow-hidden dark:text-gray">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
                   </div>
           
-                  <div class="w-xs bg-[#f1f7ff] shadow-lg rounded-lg p-6 text-center">
+                  <div class="w-xs bg-[#f1f7ff] dark:bg-gray-900 shadow-lg rounded-lg p-6 text-center">
                       <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="https://randomuser.me/api/portraits/men/2.jpg" alt="User">
-                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6] dark:text-white">Thereas Web</h3>
                       <div class="flex justify-center text-yellow-500 mb-2">
                           ★★★★★
                       </div>
-                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                      <p class="text-gray-600 dark:text-gray text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
                   </div>
           
-                  <div class="bg-[#f1f7ff] w-xs shadow-lg rounded-lg p-6 text-center">
+                  <div class="bg-[#f1f7ff] dark:bg-gray-900 w-xs shadow-lg rounded-lg p-6 text-center">
                       <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="https://randomuser.me/api/portraits/men/3.jpg" alt="User">
-                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6] dark:text-white">Thereas Web</h3>
                       <div class="flex justify-center text-yellow-500 mb-2">
                           ★★★★★
                       </div>
-                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                      <p class="text-gray-600 dark:text-gray text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
                   </div>
-                  <div class="bg-[#f1f7ff] w-xs shadow-lg rounded-lg p-6 text-center">
+                  <div class="bg-[#f1f7ff] dark:bg-gray-900 w-xs shadow-lg rounded-lg p-6 text-center">
                       <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="https://randomuser.me/api/portraits/men/3.jpg" alt="User">
-                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6] dark:text-white">Thereas Web</h3>
                       <div class="flex justify-center text-yellow-500 mb-2">
                           ★★★★★
                       </div>
-                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                      <p class="text-gray-600 dark:text-gray text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
                   </div>
-                  <div class="bg-[#f1f7ff] w-xs shadow-lg rounded-lg p-6 text-center">
+                  <div class="bg-[#f1f7ff] dark:bg-gray-900 w-xs shadow-lg rounded-lg p-6 text-center">
                       <img class="w-16 h-16 rounded-full mx-auto border-2 border-gray-300" src="https://randomuser.me/api/portraits/men/3.jpg" alt="User">
-                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6]">Thereas Web</h3>
+                      <h3 class="mt-4 text-lg font-semibold text-[#5c6ec6] dark:text-white">Thereas Web</h3>
                       <div class="flex justify-center text-yellow-500 mb-2">
                           ★★★★★
                       </div>
-                      <p class="text-gray-600 text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+                      <p class="text-gray-600 dark:text-gray text-sm text-wrap overflow-hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
                   </div>
              
               </div>
@@ -660,15 +661,15 @@
         <section id="contact" class="flex flex-col-reverse md:flex-row w-10/12 mx-auto md:mt-24 md:mb-24">
            <div>
             <div class="flex-col space-y-3  mb-10">
-              <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant">Contact Us</h1>
-              <p class=" py-3 text-sm text-[#777] font-poppins">
+              <h1 class="text-4xl text-[#17256a] font-extrabold font-cormorant dark:text-white">Contact Us</h1>
+              <p class="dark:text-gray py-3 text-sm text-[#777] font-poppins">
                 There are many variations of passages of Lorem Ipsum available in some form.
               </p>
             </div>
           <!-- form -->
           <form class="font-poppins">
             <div class="mb-8  border-b-2 border-[#aeb6bf]">
-                <input type="text" placeholder="Name" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box">
+                <input type="text" placeholder="Name" class=" w-full p-2  border-none  focus:outline-none  focus:rounded-box">
             </div>
             <div class="mb-8  border-b-2 border-[#aeb6bf]">
               <input type="email" placeholder="Gmail" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box">
@@ -676,7 +677,7 @@
           <div class="mb-8  border-b-2 border-[#aeb6bf]">
             <input type="text" placeholder="Message" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box">
         </div>
-            <button class="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition duration-300 cursor-pointer">
+            <button class="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition duration-300 cursor-pointer hover:scale-110 hover:bg-gradient-to-l hover:opacity-80">
                 SEND
             </button>
         </form>
@@ -690,51 +691,51 @@
 
     </main>
 
-   <!-- Footer -->
-<footer class="relative bg-[url('./assets/images/footer-bg.png')] bg-cover bg-center bg-no-repeat text-white py-16 mt-10">
-  <!-- Gradient Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-r from-[#1c73d0] to-[#9039dc] opacity-80"></div>
+      <!-- Footer -->
+    <footer class="relative bg-[url('./assets/images/footer-bg.png')] bg-cover bg-center bg-no-repeat text-white py-1.5 mt-10">
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0  dark:gradient-bg bg-gradient-to-r from-[#1c73d0] to-[#9039dc] opacity-90"></div>
 
-  <div class="container mx-auto px-4 relative z-10">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-              <img src="./assets/logo/Group (2).png" alt="Logo" class="w-32 mb-4 filter brightness-0 invert">
-              <p class="text-sm">Write a scene (based ondeffecult is jsdfnwhiestddg asdfgg asdfghg)</p>
-              <div class="flex space-x-4 mt-4">
-                  <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-youtube"></i></a>
-                  <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-x-twitter"></i></a>
-                  <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-square-instagram"></i></a>
+      <div class="container mx-auto px-4 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                
+                <div class="mb-4 flex gap-1 items-center ">
+                  <img class="h-7 w-9 mt-3 filter brightness-0 invert" src="./assets/logo/Group (3).png" alt="logo">
+                  <h2 class="text-5xl font-bold text-white tracking-wider">nyx</h2>
+                </div>
+                  <p class="text-sm">Write a scene (based ondeffecult is jsdfnwhiestddg asdfgg asdfghg)</p>
+                  <div class="flex space-x-4 mt-4">
+                      <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-youtube"></i></a>
+                      <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-square-instagram"></i></a>
+                  </div>
+              </div>
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
+                  <ul class="space-y-2">
+                      <li><a href="#" class="text-sm hover:text-gray-300">About Us</a></li>
+                      <li><a href="#" class="text-sm hover:text-gray-300">Features</a></li>
+                      <li><a href="#" class="text-sm hover:text-gray-300">News</a></li>
+                      <li><a href="#" class="text-sm hover:text-gray-300">Careers</a></li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                  <p class="text-sm mb-4">There are many variations of passages of Lorem Ipsum available, but the majority have.</p>
+                  <div class="flex">
+                      <input type="email" placeholder="Enter your email" class="bg-[#4e4bc6] text-white border-none p-2 rounded-l-md focus:outline-none flex-grow">
+                      <button class="bg-[#374cb8] hover:bg-blue-600 text-white p-2 rounded-r-md">Subscribe</button>
+                  </div>
               </div>
           </div>
-          <div>
-              <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
-              <ul class="space-y-2">
-                  <li><a href="#" class="text-sm hover:text-gray-300">About Us</a></li>
-                  <li><a href="#" class="text-sm hover:text-gray-300">Features</a></li>
-                  <li><a href="#" class="text-sm hover:text-gray-300">News</a></li>
-                  <li><a href="#" class="text-sm hover:text-gray-300">Careers</a></li>
-              </ul>
-          </div>
-          <div>
-              <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-              <p class="text-sm mb-4">There are many variations of passages of Lorem Ipsum available, but the majority have.</p>
-              <div class="flex">
-                  <input type="email" placeholder="Enter your email" class="bg-[#4e4bc6] text-white border-none p-2 rounded-l-md focus:outline-none flex-grow">
-                  <button class="bg-[#374cb8] hover:bg-blue-600 text-white p-2 rounded-r-md">Subscribe</button>
-              </div>
+          <div class="text-center mt-20">
+              <p class="text-sm">Copyright © Invato Agency All right reserved 2024</p>
           </div>
       </div>
-      <div class="text-center mt-20">
-          <p class="text-sm">Copyright © Invato Agency All right reserved 2024</p>
-      </div>
-  </div>
-</footer>
-
-
-
-
-     
+    </footer>
+    
 <!--  jQuery CDN-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 

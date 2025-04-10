@@ -10,6 +10,52 @@
 
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+html[data-theme='light'] body {
+  background: linear-gradient(to right, #d3eeff, #fdedfe);
+  color: black;
+}
+
+html[data-theme='dark'] body {
+  background-color: #111827; 
+  color: rgba(255, 255, 255, 0.607);
+}
+html[data-theme='dark'] .dark\:text-white {
+  color: white !important;
+}
+html[data-theme='dark'] .dark\:text-black {
+  color: black !important;
+}
+
+html[data-theme='dark'] .dark\:bg-gray-900 {
+  background-color: #1f2937 !important;
+}
+html[data-theme='dark'] .dark\:bg-black {
+  background-color: black !important;
+}
+
+html[data-theme='dark'] .dark\:img-white {  
+  filter: brightness(0) invert(1);
+}
+html[data-theme='dark'] .dark\:img-gray {
+  filter: grayscale(60%) brightness(1.0) contrast(1.1) hue-rotate(285deg) saturate(1.2);
+  
+}
+
+
+html[data-theme='dark'] .dark-remove-bg {
+  background-image: none !important;
+}
+
+html[data-theme='dark'] .dark\:text-gray {
+  color: rgb(207,207,210);
+}
+
+html[data-theme='dark'] .dark\:gradient-bg {
+  background: rgb(17, 24, 39) ;
+  opacity: 0.8;
 }
 
 @keyframes scroll {
@@ -52,3 +98,6 @@ header.scrolled {
 .custom-gradient:hover {
   background-position: right center;
 }
+
+
+/* ________ Animation___ */

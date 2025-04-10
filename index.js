@@ -1,4 +1,4 @@
-// active menu ____________________________
+// active menu ____________________________****
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section"); 
   const navLinks = document.querySelectorAll(".nav-link");
@@ -26,47 +26,49 @@ document.addEventListener("DOMContentLoaded", function () {
   setActiveLink(); 
 });
 
-
-// header scrolling __________________
+// header scrolling __________________****
 
 let lastScrollTop = 0;
 const header = document.querySelector('header');
-const navbar = document.querySelector('.navbar');
 
 // Scroll event listener
 window.addEventListener('scroll', () => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  // Only apply functionality when scrolled 200px or more
   if (currentScroll > 200) {
-    // Scroll down (when user scrolls down)
     if (currentScroll > lastScrollTop) {
-     
+      // Scroll down
       header.style.transition = 'transform 0.3s ease-in-out';
-      header.style.transform = 'translateY(-100%)'; 
+      header.style.transform = 'translateY(-100%)';
     } else {
-      // Scroll up (when user scrolls up)
-     
+      // Scroll up
       header.style.transition = 'transform 0.3s ease-in-out, background-color 0.3s ease-in-out';
-      header.style.transform = 'translateY(0)'; 
-      header.style.backgroundColor = 'white';
+      header.style.transform = 'translateY(0)';
 
-      // Add scrolled class to header
+      // Check for dark theme
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+      if (isDark) {
+        header.style.backgroundColor = '#1F2937'; 
+      } else {
+        header.style.backgroundColor = 'white';
+      }
+
       header.classList.add('scrolled');
     }
   } else {
-    // Reset header to default state when scrolled less than 200px
+    // Reset when less than 200px
     header.style.transition = 'none';
     header.style.transform = 'translateY(0)';
-    header.style.backgroundColor = ''; 
-    header.classList.remove('scrolled'); 
+    header.style.backgroundColor = '';
+    header.classList.remove('scrolled');
   }
 
-  // Prevent negative scroll (when scrolling back to top)
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
-// fullscreen search-bar popup________________
+
+// fullscreen search-bar popup________________****
 
 document.addEventListener('DOMContentLoaded', () => {
   const openSearch = document.getElementById('open-search');
@@ -115,8 +117,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Dark theme _________________________****
+const toggleBtn = document.getElementById("theme-toggle");
+const html = document.documentElement;
 
-//  /* featured Carousel */ ____________________
+// Load from localStorage
+document.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("theme") || "light";
+  html.setAttribute("data-theme", saved);
+  toggleBtn.textContent = saved === "dark" ? "Light" : "Dark";
+});
+
+toggleBtn.addEventListener("click", () => {
+  const current = html.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+
+  html.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+  toggleBtn.textContent = next === "dark" ? "Light" : "Dark";
+});
+
+//  /* featured Carousel */ ____________________****
 $(document).ready(function () {
   var owl = $(".featured_item").owlCarousel({
     autoplay: false, 
@@ -144,7 +165,7 @@ $(document).ready(function () {
 });
 
    
-   // featured increment & decrement button_______________
+   // featured increment & decrement button_______________****
       document.querySelectorAll(".plus-btn").forEach((btn) => {
         btn.addEventListener("click", function () {
           let countEl = this.parentElement.querySelector(".count");
@@ -163,7 +184,7 @@ $(document).ready(function () {
         });
       });
 
- // Sidebar Elements__________________
+ // Sidebar Elements__________________****
 const sidebarContainer = document.getElementById("sidebarContainer");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay"); // Overlay Element
