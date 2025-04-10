@@ -225,3 +225,30 @@ sidebarContainer.addEventListener("click", (event) => {
     closeSidebar();
   }
 });
+
+
+
+// Add to Cart ____________________****
+
+const cartIcon = document.getElementById('cart-icon');
+const cartPanel = document.getElementById('cart-panel');
+const cartOverlay = document.getElementById('cart-overlay');
+const closeCart = document.getElementById('close-cart');
+
+cartIcon.addEventListener('click', () => {
+  cartPanel.classList.remove('-translate-x-full');
+  cartOverlay.classList.add('opacity-100');
+  cartOverlay.classList.remove('opacity-0', 'pointer-events-none');
+});
+
+closeCart.addEventListener('click', () => {
+  cartPanel.classList.add('-translate-x-full');
+  cartOverlay.classList.remove('opacity-100');
+  cartOverlay.classList.add('opacity-0', 'pointer-events-none');
+});
+
+cartOverlay.addEventListener('click', () => {
+  cartPanel.classList.add('-translate-x-full');
+  cartOverlay.classList.remove('opacity-100');
+  cartOverlay.classList.add('opacity-0', 'pointer-events-none');
+});
