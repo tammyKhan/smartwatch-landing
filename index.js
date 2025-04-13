@@ -137,6 +137,32 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.textContent = next === "dark" ? "Light" : "Dark";
 });
 
+// image change-- light -- Dark ______________*********
+function updateImageBasedOnTheme() {
+  const img = document.getElementById('themeImage');
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+  img.src = isDark
+    ? './assets/images/special-dark.png'
+    : './assets/images/special-light.png';
+
+    img.className = isDark 
+    ? 'h-[60vh] lg:h-[80vh] max-w-full md:max-w-fit bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(56.63,_39.80,_86.06,_0.50)_2%,_rgba(56.63,_39.80,_86.06,_0)_74%)] rounded-full   '
+    : 'h-[50vh] lg:h-[70vh] max-w-full   bg-zinc-200/50 rounded-full shadow-[0px_0px_50px_15px_rgba(222,235,242,1.00)]';
+    
+}
+
+
+// Call on load
+updateImageBasedOnTheme();
+
+// Optional: if theme can change dynamically, listen for mutation
+const observer = new MutationObserver(updateImageBasedOnTheme);
+observer.observe(document.documentElement, {
+  attributes: true,
+  attributeFilter: ['data-theme'],
+});
+
 //  /* featured Carousel */ ____________________****
 $(document).ready(function () {
   var owl = $(".featured_item").owlCarousel({
