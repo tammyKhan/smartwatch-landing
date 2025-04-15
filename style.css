@@ -41,6 +41,10 @@ html[data-theme='dark'] .dark\:bg-black {
 html[data-theme='dark'] .dark\:bg-slate {
   background-color: #0b0b26;
 }
+html[data-theme='dark'] .dark\:bg-accordion {
+  background-image: linear-gradient(to right, #121228, #0b0b26) !important;
+}
+
 
 html[data-theme='dark'] .dark\:img-white {  
   filter: brightness(0) invert(1);
