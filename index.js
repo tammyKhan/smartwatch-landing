@@ -1,3 +1,74 @@
+// preloader ______________________****
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.classList.add('opacity-0');
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 500); 
+});
+
+// gsap title animation_______******
+gsap.registerPlugin(ScrollTrigger);
+
+  /* Title Animation */
+  gsap.utils.toArray(".title_animated").forEach(title => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: title,
+        start: 'top 90%',
+        end: 'bottom 60%',
+        toggleActions: 'play none none none',
+      }
+    });
+
+    const split = new SplitText(title, { type: "chars,words" });
+    gsap.set(title, { perspective: 400 });
+
+    tl.from(split.chars, {
+      duration: 1,
+      opacity: 0,
+      y: 60,
+      rotationX: 180,
+      scale: 0.5,
+      transformOrigin: "center center -50",
+      stagger: 0.03
+    });
+  });
+
+  /* Fade In from Right */
+  gsap.utils.toArray(".bdFadeRight").forEach(item => {
+    gsap.from(item, {
+      scrollTrigger: {
+        trigger: item,
+        start: "top center+=100",
+        toggleActions: "play none none none",
+      },
+      x: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.out"
+    });
+  });
+
+  /* One by One Appearance */
+  const oneByOneItems = gsap.utils.toArray('.bd-one-by-one');
+  gsap.set(oneByOneItems, { opacity: 0, x: -30 });
+
+  gsap.to(oneByOneItems, {
+    scrollTrigger: {
+      trigger: oneByOneItems[0],
+      start: "top center+=100",
+      toggleActions: "play none none none",
+    },
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "back.out(1.4)",
+    stagger: 0.2
+  });
+
+		
+
 // active menu ____________________________****
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section"); 

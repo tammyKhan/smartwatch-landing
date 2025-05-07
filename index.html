@@ -27,7 +27,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="./style.css">
+
+    <!-- GSAP Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- ScrollTrigger Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- SplitText Plugin (GreenSock Club plugin) -->
+<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+
+
+
   </head>
+  <!-- Preloader -->
+<div id="preloader" class="fixed inset-0 bg-base-100 flex items-center justify-center z-50 transition-opacity duration-500">
+  <div class="flex flex-col items-center gap-4">
+    <!-- DaisyUI Spinner -->
+    <span class="loading loading-bars loading-xl"></span>
+    <p class="text-primary font-semibold text-lg">Loading...</p>
+  </div>
+</div>
+
 
 
   <body class=" transition-colors duration-300 ">
@@ -275,20 +296,20 @@
       <main>
 
           <!-- Banner Section -->
-      <section id="home" class=" hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]">
+      <section id="home" class="bdFadeRight hero grid grid-content-start bg-[url('./assets/images/hero-bottom.png')] bg-no-repeat bg-contain bg-bottom  lg:h-[135vh]" >
         <div class="hero-content pt-0 grid  md:grid-cols-2 gap-0 ">
-          <div class="relative">
+          <div class="relative" >
             <img class=" h-[60vh] md:h-[80vh] lg:h-[100vh] justify-self-center lg:justify-self-end col-span-1" src="./assets//images/hero-img.png" alt="">
           </div>
           <div class="absolute left-0 -bottom-10 sm:left-20 md:left-0 md:-bottom-35 lg:-bottom-55 lg:left-2 md:w-96 md:h-96 mix-blend-screen bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(102.88,_70.67,_159.25,_0.62)_1%,_rgba(56.63,_39.80,_86.06,_0)_76%)] rounded-full blur-[49.20px]"></div>
         
           <div class="md:h-[90vh] col-span-1 flex flex-col justify-center   ml-3 lg:ml-0 mb-24">
             <div class="flex flex-col justify-center mr-10 bg-contain  bg-[url('./assets/images/hero-circle.png')] bg-no-repeat bg-right-top dark-remove-bg ">
-              <h1 class="font-satoshi bg-gradient-to-r from-[#2887ff] to-[#973fff] text-transparent bg-clip-text pb-[30px]   text-3xl md:text-5xl lg:text-6xl font-bold ">
+              <h1  class="font-satoshi bg-gradient-to-r from-[#2887ff] to-[#973fff] text-transparent bg-clip-text pb-[30px]   text-3xl md:text-5xl lg:text-6xl font-bold ">
               Make Your Recovery
             </h1>
             
-            <p class="pt-[10px] w-5/6 text-[#777] font-medium font-poppins text-sm lg:text-base">
+            <p  class="pt-[10px] w-5/6 text-[#777] font-medium font-poppins text-sm lg:text-base">
               There are many variations of passages of Lorem Ipsum available in some form others.
             </p>
           </div>
@@ -304,20 +325,20 @@
       
 
         <!-- Featured Collection -->
-          <section id="about" class="px-6 w-10/12 mx-auto mb-10">
+          <section id="about" class="px-6 w-10/12 mx-auto mb-10 " >
               <div class="flex-col space-y-3 text-center">
-                  <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] dark:text-gray font-extrabold ">Featured Collection</h1>
+                  <h1  class="font-satoshi text-3xl md:text-4xl text-[#17256a] dark:text-gray font-extrabold title_animated" >Featured Collection</h1>
                 
-                  <p class="sm:w-5/7 lg:w-3/7 text-xs md:text-sm mx-auto py-3  text-[#777]  font-poppins">
+                  <p  class="sm:w-5/7 lg:w-3/7 text-xs md:text-sm mx-auto py-3  text-[#777]  font-poppins title_animated" >
                     There are many variations of passages of Lorem Ipsum available in some form, 
                   </p>
                   <!-- Featured Card -->
-                  <div class="relative flex items-center justify-center mt-10 ">
+                  <div class="relative flex items-center justify-center mt-10 " >
                 
                     <!-- Product Cards -->
                     <div class=" owl-carousel featured_item w-9/12">
                       <!-- card-1 -->
-                        <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900">
+                        <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900 bd-one-by-one">
                             <span class="absolute bg-[#00a1ff] font-bold text-white text-sm flex items-center justify-center h-13 w-13  rounded-full top-6 left-6">$99/-</span>
                             <img src="./assets/images/featured-img-1.png" class="h-[30vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8" alt="feature-img">
                             <h3 class="font-semibold text-lg font-satoshi text-[#475496] dark:text-white">Waterproof Design</h3>
@@ -334,7 +355,7 @@
                             <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                         </div>
                       <!-- card-2 -->
-                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900">
+                      <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900 bd-one-by-one">
                         <span class="absolute bg-[#00a1ff] font-bold text-white text-sm flex items-center justify-center h-13 w-13  rounded-full top-6 left-6">$99/-</span>
                         <img src="./assets/images/featured-img-2.png" class="h-[30vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8" alt="feature-img">
                         <h3 class="font-semibold text-lg font-satoshi text-[#475496] dark:text-white">Waterproof Design</h3>
@@ -351,7 +372,7 @@
                         <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now</button>
                     </div>
                         <!-- card-3 -->
-                        <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900">
+                        <div class="relative bg-white py-12 px-11 rounded-2xl shadow-lg text-center dark:bg-gray-900 bd-one-by-one">
                           <span class="absolute bg-[#00a1ff] font-bold text-white text-sm flex items-center justify-center h-13 w-13  rounded-full top-6 left-6">$99/-</span>
                           <img src="./assets/images/featured-img-3.png" class="h-[30vh] max-w-fit lg:max-w-full md:h-[30vh] mx-auto mt-4 mb-8" alt="feature-img">
                           <h3 class="font-semibold text-lg dark:text-white font-satoshi text-[#475496]">Waterproof Design</h3>
@@ -419,50 +440,50 @@
             </section>
 
           <!-- Our Gallery -->
-      <section id="gallery" class="md:my-24 my-10">
-        <div class="flex-col space-y-3 text-center mb-14">
-          <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray">Our Gallery</h1>
-          <p class="w-5/7 md:w-3/7  mx-auto py-3 text-xs md:text-sm text-[#777] font-poppins">
+      <section id="gallery" class="md:my-24 my-10" >
+        <div class="flex-col space-y-3 text-center mb-14" >
+          <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray title_animated">Our Gallery</h1>
+          <p class="w-5/7 md:w-3/7  mx-auto py-3 text-xs md:text-sm text-[#777] font-poppins title_animated">
             There are many variations of passages of Lorem Ipsum available in some form.
           </p>
         </div>
 
         <!-- Grid Container -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-rows-2 lg:grid-cols-14 h-auto cursor-pointer">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-rows-2 lg:grid-cols-14 h-auto cursor-pointer" >
 
           <!-- Image Wrapper with Inner Border -->
-          <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 lg:row-span-2 overflow-hidden group  ">
+          <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 lg:row-span-2 overflow-hidden group  " >
             <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[90vh] transition-transform duration-500 ease-in-out group-hover:scale-110 " 
                 src="./assets/images/Gallery-1.jpg" 
-                alt="Gallery Image">
+                alt="Gallery Image" >
             <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
           </div>
 
           <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-6  overflow-hidden group">
             <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110 " 
                 src="./assets/images/Gallery-2.jpg" 
-                alt="Gallery Image">
+                alt="Gallery Image" >
             <div class="absolute inset-4 border  border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
           </div>
 
           <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 overflow-hidden group">
             <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110 " 
                 src="./assets/images/gallery-3.jpg" 
-                alt="Gallery Image">
+                alt="Gallery Image" >
             <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
           </div>
 
           <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-4 overflow-hidden group">
             <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110" 
                 src="./assets/images/gallery-4.jpg" 
-                alt="Gallery Image">
+                alt="Gallery Image" >
             <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
           </div>
 
           <div class="relative sm:col-span-1 md:col-span-1 lg:col-span-6 lg:row-span-1 overflow-hidden group">
             <img class="object-cover w-full h-60 sm:h-72 md:h-80 lg:h-[45vh] transition-transform duration-500 ease-in-out group-hover:scale-110 " 
                 src="./assets/images/gallery-5.jpg" 
-                alt="Gallery Image">
+                alt="Gallery Image" >
             <div class="absolute inset-4 border border-white opacity-0 scale-100 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"></div>
           </div>
 
@@ -471,10 +492,10 @@
 
 
         <!-- Special Features -->
-      <section id="featured" class="mb-24 mt-20 lg:mt-0">
+      <section id="featured" class="mb-24 mt-20 lg:mt-0" >
         <div class="flex-col space-y-3 text-center mb-14">
-          <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray">Special Features</h1>
-          <p class="w-5/7 md:w-3/7  mx-auto py-3 text-xs md:text-sm text-[#777] font-poppins">
+          <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray title_animated">Special Features</h1>
+          <p class="w-5/7 md:w-3/7  mx-auto py-3 text-xs md:text-sm text-[#777] font-poppins title_animated">
             There are many variations of passages of Lorem Ipsum available in some form.
           </p>
         </div>
@@ -585,7 +606,7 @@
 
 
         <!-- Sale Up -->
-      <section id="product" class="md:mt-56 mb-12 bg-[#cad7fa] dark:bg-slate md:relative">
+      <section id="product" class="md:mt-56 mb-12 bg-[#cad7fa] dark:bg-slate md:relative" >
         <div class="flex flex-col md:flex-row w-10/12 mx-auto gap-4">
           <!-- Image Section -->
           <div class="relative md:absolute lg:top-[-35%] md:right-0  md:top-[-25%] mt-6 md:mt-0 mx-auto">
@@ -594,8 +615,8 @@
           <div class="hidden md:block md:w-96 md:h-96 md:absolute md:right-0 md:top-0 lg:right-20 lg:top-0 w-[776.26px] h-[776.26px] mix-blend-screen bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(79.26,_32.79,_160.58,_0.62)_1%,_rgba(56.63,_39.80,_86.06,_0)_84%)] rounded-full blur-[49.20px]"></div>
           <!-- Content Section -->
           <div class="my-14 text-center md:text-left">
-            <h3 class=" text-3xl md:text-4xl text-black dark:text-white font-bold">Sale Up to 30% Offer</h3>
-            <p class="font-poppins text-sm md:text-base text-[#777] mt-3 md:w-2/3 mx-auto md:mx-0">There are many variations of passages of Lorem Ipsum available in some form, </p>
+            <h3 class=" text-3xl md:text-4xl text-black dark:text-white font-bold ">Sale Up to 30% Offer</h3>
+            <p class="font-poppins text-sm md:text-base text-[#777] mt-3 md:w-2/3 mx-auto md:mx-0 ">There are many variations of passages of Lorem Ipsum available in some form, </p>
             <button class="mt-6 bg-gradient-to-r from-[#E64AFF] to-[#7C15FF] text-white px-6 py-2 rounded-full shadow-md hover:bg-gradient-to-l hover:opacity-80  transition-transform font-poppins text-xs cursor-pointer">
               <i class="fa-solid fa-cart-shopping mr-1"></i> Buy Now
             </button>
@@ -608,10 +629,10 @@
 
 
           <!-- What people ask -->
-            <section id="faq" class="mt-10 md:mt-24 mb-24 w-10/12 mx-auto">
+            <section id="faq" class="mt-10 md:mt-24 mb-24 w-10/12 mx-auto" >
               <div class="flex-col space-y-3 text-center mb-10">
-                <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray">What People Usually Ask</h1>
-                <p class="w-5/7 md:w-3/7  mx-auto py-3 text-xs md:text-sm text-[#777] font-poppins">
+                <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray title_animated">What People Usually Ask</h1>
+                <p class="w-5/7 md:w-3/7  mx-auto py-3 text-xs md:text-sm text-[#777] font-poppins title_animated">
                   There are many variations of passages of Lorem Ipsum available in some form.
                 </p>
               
@@ -641,7 +662,7 @@
             </section>
 
           <!-- Watches Your Attractive -->
-          <section class= "gap-5 my-24">
+          <section class= "gap-5 my-24" >
             <div class="relative md:flex lg:w-9/12 md:w-11/12 w-10/12 mx-auto">
               <div class="flex-1 ">
                 <img class="h-[50vh] md:h-[80vh] " src="./assets/images/attractive.png" alt="">
@@ -649,7 +670,7 @@
             <div class="absolute left-0 md:left-13 bottom-45 md:-bottom-23 md:w-96 md:h-96 mix-blend-screen bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(102.88,_70.67,_159.25,_0.62)_1%,_rgba(56.63,_39.80,_86.06,_0)_76%)] rounded-full blur-[49.20px]"></div>
             <!-- ___________ -->
             <div class="flex-1">
-              <h2 class="font-satoshi text-3xl md:text-4xl font-bold  mt-2 mb-10 text-[#17256a] dark:text-gray">Watches Your Attractive</h2>
+              <h2 class="font-satoshi text-3xl md:text-4xl font-bold  mt-2 mb-10 text-[#17256a] dark:text-gray title_animated">Watches Your Attractive</h2>
               <div class="mb-9 font-poppins text-xs flex gap-3 items-start text-[#777777]">
                 <img class="mt-0" src="./assets/icon/hand.svg" alt="">
                 <p>
@@ -676,10 +697,10 @@
           </section>
 
           <!-- Customer Reviews -->
-          <section id="review" class="md:my-24  mt-40 mb-24">
+          <section id="review" class="md:my-24  mt-40 mb-24" >
             <div class="flex-col space-y-3 text-center mb-16">
-              <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray mt-24">Customer Reviews</h1>
-              <p class="w-5/7 md:w-3/7  mx-auto py-3 text-xs md:text-sm text-[#777] font-poppins">
+              <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray mt-24 title_animated">Customer Reviews</h1>
+              <p class="w-5/7 md:w-3/7  mx-auto py-3 text-xs md:text-sm text-[#777] font-poppins title_animated">
                 There are many variations of passages of Lorem Ipsum available in some form.
               </p>
             </div>
@@ -736,11 +757,11 @@
           </section>
 
           <!-- Contact Us -->
-          <section id="contact" class="relative flex flex-col-reverse md:flex-row w-10/12 mx-auto md:mt-24 md:mb-24">
+          <section id="contact" class="relative flex flex-col-reverse md:flex-row w-10/12 mx-auto md:mt-24 md:mb-24" >
             <div>
               <div class="flex-col space-y-3  mb-10">
-                <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray mt-24">Contact Us</h1>
-                <p class="dark:text-gray py-3 text-xs md:text-sm text-[#777] font-poppins">
+                <h1 class="font-satoshi text-3xl md:text-4xl text-[#17256a] font-extrabold  dark:text-gray mt-24 title_animated">Contact Us</h1>
+                <p class="dark:text-gray py-3 text-xs md:text-sm text-[#777] font-poppins title_animated">
                   There are many variations of passages of Lorem Ipsum available in some form.
                 </p>
               </div>
@@ -750,7 +771,7 @@
                   <input type="text" placeholder="Name" class=" w-full p-2  border-none  focus:outline-none  focus:rounded-box" required>
               </div>
               <div class="mb-8  border-b-2 border-[#aeb6bf]">
-                <input type="email" placeholder="Gmail" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box" required>
+                <input type="email" placeholder="Email" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box" required>
             </div>
             <div class="mb-8  border-b-2 border-[#aeb6bf]">
               <input type="text" placeholder="Message" class=" w-full p-2   border-none  focus:outline-none  focus:rounded-box" required>
@@ -829,7 +850,7 @@
                 </div>
             </div>
             <div class="text-center mt-20">
-                <p class="text-sm">Copyright © Invato Agency All right reserved 2024</p>
+                <p class="text-sm">Copyright© Apexels All right reserved 2025</p>
             </div>
         </div>
       </footer>
